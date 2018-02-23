@@ -1,30 +1,23 @@
 # RStudio - Survival guide
-
+---
 ## Opsætning
-
-### Installer R
+### Installér R
 #### R-statistics <https://www.r-project.org/>
 #### RStudio <https://www.rstudio.com/>
-
 ### Working directory (WD)
 #### Aktuelle WD
-
 ```
 > getwd()
 ```
-
 #### Skift WD
-
 ```
 > setwd(“C://file/path”)
 ```
-
-> > Eller 
-
+** Eller ** 
 ```
 > setwd("~/Test")
 ```
-
+---
 ### Installer relevante pakker
 
 ```
@@ -58,7 +51,7 @@
 
 
 ## Diskriptiv statistik
-
+---
 ### Funktioner
 
 #### 1. Indbygget
@@ -103,13 +96,13 @@
 	Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
 
 ## Statistiske analyser
-
+---
 ### Case-control studies
 
 	<http://rpubs.com/kaz_yos/case-control1>
 
 ## Eksporter eller gem data i fil
-
+---
 ```
 > write.table(dat, ”dat.txt”, sep=”\t”, quote=F, row.names=T, col.names=T)
 ```
@@ -122,7 +115,7 @@
 	• col.names=T write out column names
 
 ## Mest relevante biostatistics pakker
-
+---
 	• dplyr - Subsetting, summarizing, rearranging, and joining together data sets.
 	• vcd - Visualization tools and tests for categorical data.
 	• foreign - Want to read a SAS data set into R? Or an SPSS data set?
@@ -134,11 +127,11 @@
 	
 
 ## Indbyggede datasæt i R
-
+---
 	<http://www.sthda.com/english/wiki/r-built-in-data-sets/>
 
 ## Basale funktioner
-
+---
 ### Se importeret dataværdier i dataframe (tabel)
 	```
 	> dat
@@ -157,7 +150,7 @@
 	> select(mtcars, mpg, hp)
 	```
 ## Nyttige funktioner og pakker
-
+---
 ### Indlæs data fra database
 	```
 	RMySQL, RPostgresSQL, RSQLite  
@@ -175,7 +168,7 @@
 	read.csv, read.table, and read.fwf.
 	```
 ## Visualiser data
-
+---
 	ggplot2 - R's famous package for making beautiful graphics.
 
 	ggvis - Interactive, web based graphics built with the grammar of graphics.
@@ -195,7 +188,7 @@
  			googleVis - Let's you use Google Chart tools to visualize data in R. 
 
 ## To model data
-
+---
 	car - car's Anova function is popular for making type II and type III Anova tables.
 
 	mgcv - Generalized Additive Models
@@ -215,7 +208,7 @@
 	caret - Tools for training regression and classification models
 
 ## Report results
-
+---
 	shiny - Easily make interactive, web apps with R.
 
 	R Markdown - Reporting. Export your report as an HTML, pdf, or MS Word document, or a HTML or pdf slideshow.
@@ -223,7 +216,7 @@
 	xtable - The xtable function takes an R object (like a data frame) and returns the latex or HTML code to embed.
 
 ## Spatial data
-
+---
 	sp, maptools - Tools for loading and using spatial data including shapefiles.
 
 	maps - Easy to use map polygons for plots.
@@ -231,7 +224,7 @@
 	ggmap - Download street maps straight from Google maps and use them as a background in your ggplots.
 
 ## Time Series and Financial data
-
+---
 	zoo - Provides the most popular format for saving time series objects in R.
 
 	xts - Very flexible tools for manipulating time series data sets.
@@ -239,7 +232,7 @@
 	quantmod - Tools for downloading financial data, plotting common charts, and doing technical analysis.
 
 ## High performance R code
-	
+---	
 	Rcpp - Write R functions that call C++ code for lightning fast speed.
 
 	data.table - An alternative way to organize data sets for very, very fast operations. Useful for big data.
@@ -247,7 +240,7 @@
 	parallel - Use parallel processing in R to speed up your code or to crunch large data sets.
 
 ## Work with the web
-
+---
 	XML - Read and create XML documents with R
 
 	jsonlite - Read and create JSON data tables with R
@@ -255,13 +248,13 @@
 	httr - A set of useful tools for working with http connections
 
 ## Diverse
-
+---
 	testthat - testthat provides an easy way to write unit tests for your code projects.
 
-	roxygen2 - Document your R packages, turns inline code comments into documentation pages.
+	roxygen2 - Document your R packages, turns inline code comments into pages.
 
 ## Yderligere ressourcer
-
+---
 	<https://support.rstudio.com/hc/en-us/articles/200552336>
 	
 	<https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ>

@@ -123,10 +123,10 @@
 
 ## Mest relevante biostatistics pakker
 
-	• dplyr - Essential shortcuts for subsetting, summarizing, rearranging, and joining together data sets.
+	• dplyr - Subsetting, summarizing, rearranging, and joining together data sets.
 	• vcd - Visualization tools and tests for categorical data.
 	• foreign - Want to read a SAS data set into R? Or an SPSS data set?
-	• tidyr - Changes the layout of your data sets. Use the gather and spread functions to convert your data into the tidy format.
+	• tidyr - Changes the layout of your data sets, converts into tidy format by gather and spread functions.
 	• multcomp - Tools for multiple comparison testing.
 	• survival - Tools for survival analysis.
 	• stringr - Easy to learn tools for regular expressions and character strings.
@@ -135,61 +135,45 @@
 
 ## Indbyggede datasæt i R
 
-	http://www.sthda.com/english/wiki/r-built-in-data-sets
+	<http://www.sthda.com/english/wiki/r-built-in-data-sets/>
 
 ## Basale funktioner
 
 ### Se importeret dataværdier i dataframe (tabel)
-
-```
-> dat
-```
-
+	```
+	> dat
+	```
 ### Se alle variable (kolonner) i dataframen (tabellen)
-
-```
-> ls() 
-```
-
+	```
+	> ls() 
+	```
 ### Lav ny dataframe (tabel) med specifikke variable (kolonner)
-
-```
-> myvars <- c("v1", "v2", "v3")
-> newdata <- mydata[myvars]
-```
-
+	```
+	> myvars <- c("v1", "v2", "v3")
+	> newdata <- mydata[myvars]
+	```
 ### Choose only certain columns with select(dataframename, columnName1, columnName2).
-		
-```
-> select(mtcars, mpg, hp)
-```
-
+	```
+	> select(mtcars, mpg, hp)
+	```
 ## Nyttige funktioner og pakker
 
 ### Indlæs data fra database
-
 	```
 	RMySQL, RPostgresSQL, RSQLite  
 	```
-
 ### Indlæs og skriv data til Excel
-	
 	```
 	XLConnect, xlsx
 	```
-	
 ### Indlæs data fra SAS, SPSS mv. i R
-
 	```
 	foreign
 	```
-	
 ### Indlæs data fra tekstfiler (indbygget i R)
-
 	```
 	read.csv, read.table, and read.fwf.
 	```
-
 ## Visualiser data
 
 	ggplot2 - R's famous package for making beautiful graphics.
@@ -230,15 +214,13 @@
 
 	caret - Tools for training regression and classification models
 
-
 ## Report results
-	
+
 	shiny - Easily make interactive, web apps with R.
 
 	R Markdown - Reporting. Export your report as an HTML, pdf, or MS Word document, or a HTML or pdf slideshow.
 
 	xtable - The xtable function takes an R object (like a data frame) and returns the latex or HTML code to embed.
-
 
 ## Spatial data
 
@@ -248,7 +230,6 @@
 
 	ggmap - Download street maps straight from Google maps and use them as a background in your ggplots.
 
-
 ## Time Series and Financial data
 
 	zoo - Provides the most popular format for saving time series objects in R.
@@ -257,7 +238,6 @@
 
 	quantmod - Tools for downloading financial data, plotting common charts, and doing technical analysis.
 
-
 ## High performance R code
 	
 	Rcpp - Write R functions that call C++ code for lightning fast speed.
@@ -265,7 +245,6 @@
 	data.table - An alternative way to organize data sets for very, very fast operations. Useful for big data.
 
 	parallel - Use parallel processing in R to speed up your code or to crunch large data sets.
-
 
 ## Work with the web
 
@@ -279,9 +258,8 @@
 
 	testthat - testthat provides an easy way to write unit tests for your code projects.
 
-	roxygen2 - Document your R packages. Turns inline code comments into documentation pages and builds a package namespace.
+	roxygen2 - Document your R packages, turns inline code comments into documentation pages.
 
- 
 ## Yderligere ressourcer
 
 	<https://support.rstudio.com/hc/en-us/articles/200552336>

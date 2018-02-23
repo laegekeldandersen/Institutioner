@@ -7,21 +7,29 @@
 #### RStudio (https://www.rstudio.com/)
 
 ### Working directory
-#### Se aktuelle: Find: getwd()
+#### Se aktuelle: getwd()
 #### Vælg nyt: setwd(“C://file/path”)
 
 ### Installer relevante pakker
 #### Packages -> Select repository
 #### Packages  -> Install packages
 #### install.packages("<the package's name>")
-#### Load relevant pakke: 
+
+#### Load pakke: library(<the package's name>)
 
 ### Importer eller åben data
+####read.csv(file=”myfile”)
 
 
 
 ## Diskriptiv statistik
-
+### Funktioner
+#### 1. sapply() *1
+#### 2. summary(mydata)
+#### 3. describe(mydata)
+#### 4. stat.desc(mydata)
+#### 5. describe(mydata)
+#### 6. 
 
 
 ## Statistisk analyse

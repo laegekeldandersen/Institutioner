@@ -284,8 +284,8 @@
  
 ## Yderligere ressourcer
 
-	https://support.rstudio.com/hc/en-us/articles/200552336
+	<https://support.rstudio.com/hc/en-us/articles/200552336>
 	
-	https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ_
+	<https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ>
 
 

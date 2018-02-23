@@ -162,7 +162,7 @@ eller
 > newdata <- mydata[myvars]
 ```
 
-	To choose only certain columns, you use the select() function with syntax such as select(dataframename, columnName1, columnName2). No quotation marks are needed with the column names
+## Choose only certain columns with syntax such as select(dataframename, columnName1, columnName2).
 		
 ```
 > select(mtcars, mpg, hp)
@@ -190,7 +190,7 @@ eller
 	read.csv, read.table, and read.fwf.
 
 
-## To visualize data
+## Visualize data
 
 	ggplot2 - R's famous package for making beautiful graphics.
 
@@ -199,16 +199,16 @@ eller
 	rgl - Interactive 3D visualizations with R
 
 	htmlwidgets - A fast way to build interactive (javascript based) visualizations with R. 
-	Packages that implement htmlwidgets include:
+	
+		Packages that implement htmlwidgets include:
 
-		leaflet (maps)
-		dygraphs (time series)
-		DT (tables)
-		diagrammeR (diagrams)
-		network3D (network graphs)
-		threeJS (3D scatterplots and globes).
- 
-	googleVis - Let's you use Google Chart tools to visualize data in R. 
+			leaflet (maps)
+			dygraphs (time series)
+			DT (tables)
+			diagrammeR (diagrams)
+			network3D (network graphs)
+			threeJS (3D scatterplots and globes)
+ 			googleVis - Let's you use Google Chart tools to visualize data in R. 
 
 ## To model data
 
@@ -230,6 +230,7 @@ eller
 
 	caret - Tools for training regression and classification models
 
+
 ## To report results
 	
 	shiny - Easily make interactive, web apps with R.
@@ -237,6 +238,7 @@ eller
 	R Markdown - Reporting. Export your report as an HTML, pdf, or MS Word document, or a HTML or pdf slideshow.
 
 	xtable - The xtable function takes an R object (like a data frame) and returns the latex or HTML code to embed.
+
 
 ## For Spatial data
 
@@ -246,6 +248,7 @@ eller
 
 	ggmap - Download street maps straight from Google maps and use them as a background in your ggplots.
 
+
 ## For Time Series and Financial data
 
 	zoo - Provides the most popular format for saving time series objects in R.
@@ -254,6 +257,7 @@ eller
 
 	quantmod - Tools for downloading financial data, plotting common charts, and doing technical analysis.
 
+
 ## To write high performance R code
 	
 	Rcpp - Write R functions that call C++ code for lightning fast speed.
@@ -261,6 +265,7 @@ eller
 	data.table - An alternative way to organize data sets for very, very fast operations. Useful for big data.
 
 	parallel - Use parallel processing in R to speed up your code or to crunch large data sets.
+
 
 ## To work with the web
 

@@ -53,7 +53,8 @@ eller
 	• Derfor indeholder en dataframe kolonner og rækker med data.
 	• If every column contains a title, then argument should be header=TRUE (or header=T), otherwise header=F.
 	• If the file is tab-delimited, then sep=”\t”. Other options are, e.g., sep=”,” and sep=” ”.
-	• If every case (row) has it’s own unambiquous (non-repeating) title, and the first column of the file contains these row names, 		then row.names=1, otherwise the argument should be deleted.
+	• If every case (row) has it’s own non-repeating title, and the first column of the file contains these row name
+	• then row.names=1, otherwise the argument should be deleted.
 
 
 ## Diskriptiv statistik
@@ -155,14 +156,14 @@ eller
 > ls() 
 ```
 
-## Lav ny dataframe (tabel) med specifikke variable (kolonner)
+### Lav ny dataframe (tabel) med specifikke variable (kolonner)
 
 ```
 > myvars <- c("v1", "v2", "v3")
 > newdata <- mydata[myvars]
 ```
 
-## Choose only certain columns with syntax such as select(dataframename, columnName1, columnName2).
+### Choose only certain columns with syntax such as select(dataframename, columnName1, columnName2).
 		
 ```
 > select(mtcars, mpg, hp)
@@ -175,20 +176,27 @@ eller
 
 ### Indlæs data fra database
 
+	```
 	RMySQL, RPostgresSQL, RSQLite  
+	```
 
 ### Indlæs og skriv data til Excel
 	
+	```
 	XLConnect, xlsx
+	```
 	
 ### Indlæs data fra SAS, SPSS mv. i R
 
+	```
 	foreign
-
+	```
+	
 ### Indlæs data fra tekstfiler (indbygget i R)
 
+	```
 	read.csv, read.table, and read.fwf.
-
+	```
 
 ## Visualize data
 

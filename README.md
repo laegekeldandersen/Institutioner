@@ -3,8 +3,8 @@
 ## Opsætning
 
 ### Installer R
-#### R-statistics (https://www.r-project.org/)
-#### RStudio (https://www.rstudio.com/)
+#### R-statistics <https://www.r-project.org/>
+#### RStudio <https://www.rstudio.com/>
 
 ### Working directory (WD)
 #### Aktuelle WD
@@ -19,7 +19,7 @@
 > setwd(“C://file/path”)
 ```
 
-eller 
+    Eller 
 
 ```
 > setwd("~/Test")

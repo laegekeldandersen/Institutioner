@@ -6,42 +6,54 @@
 #### R-statistics (https://www.r-project.org/)
 #### RStudio (https://www.rstudio.com/)
 
-### Working directory
-#### Se aktuelle
+### Working directory (WD)
+#### Aktuelle WD
+
 ```
 > getwd()
 ```
-#### Skift
+
+#### Skift WD
+
 ```
 > setwd(“C://file/path”)
 ```
+
 eller 
+
 ```
 > setwd("~/Test")
 ```
+
 ### Installer relevante pakker
+
 ```
 > install.packages("<the package's name>")
 ```
 
-### Load pakke
+### Indlæs pakke
+
 ```
 > library(<the package's name>)
 ```
 
 ### Importer eller åbn data
+
 ```
 > read.csv(file=”myfile”)
 ```
 
 ### Gem tabelformateret data fra fil til tabel i R
+
 ```
 > dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1)
 ```
-• “dat” Kaldes en dataframe, hvis “filename” er formateret som en tabel. Derfor indeholder en dataframe kolonner og rækker med data.
-• If every column contains a title, then argument should be header=TRUE (or header=T), otherwise header=F.
-• If the file is tab-delimited (there is a tab between every column), then sep=”\t”. Other options are, e.g., sep=”,” and sep=” ”
-• If every case (row) has it’s own unambiquous (non-repeating) title, and the first column of the file contains these row names, then row.names=1, otherwise the argument should be deleted.
+
+	• “dat” Kaldes en dataframe, hvis den er formateret som en tabel. 
+	• Derfor indeholder en dataframe kolonner og rækker med data.
+	• If every column contains a title, then argument should be header=TRUE (or header=T), otherwise header=F.
+	• If the file is tab-delimited, then sep=”\t”. Other options are, e.g., sep=”,” and sep=” ”.
+	• If every case (row) has it’s own unambiquous (non-repeating) title, and the first column of the file contains these row names, 		then row.names=1, otherwise the argument should be deleted.
 
 
 ## Diskriptiv statistik
@@ -49,108 +61,112 @@ eller
 ### Funktioner
 
 #### 1. Indbygget
+
 ```
-> sapply(mydata) 
+> sapply(mydata)
 ```
-Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
+
+	Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
 
 #### 2. Indbygget
+
 ```
 > summary(mydata)
 ```
-Output: mean,median,25th and 75th quartiles,min,max
+
+	Output: mean,median,25th and 75th quartiles,min,max
 
 #### 3. Hmisc-pakken
+
 ```
 > install.packages("hmisc")
 > library(Hmisc)
 > describe(mydata) 
 ```
-Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
+
+	Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
 
 #### 4. Pastecs-pakken
+
 ```
 > install.packages("pastecs")
 > library(pastecs)
 > stat.desc(mydata) 
 ```
-Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
+
+	Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
 
 #### 5. Psych-pakken
+
 ```
 > install.packages("psych")
 > library(psych)
 > describe(mydata)
 ```
-Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
+
+	Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
 
 ## Statistiske analyser
-### Statistiske funktioner til case-control studies 
+
+### Case-control studies
+
 	http://rpubs.com/kaz_yos/case-control1
 
-
- 
 ## Eksporter eller gem data i fil
+
 ```
 > write.table(dat, ”dat.txt”, sep=”\t”, quote=F, row.names=T, col.names=T)
 ```
 
-• dat name of the table in R
-• ”dat.txt” name of the file on disk
-• sep=”\t” use tabs to separate columns
-• quote=F don’t quote anything, not even text
-• row.names=T write out row names (or F if there are no row names)
-• col.names=T write out column names
+	• dat name of the table in R
+	• ”dat.txt” name of the file on disk
+	• sep=”\t” use tabs to separate columns
+	• quote=F don’t quote anything, not even text
+	• row.names=T write out row names (or F if there are no row names)
+	• col.names=T write out column names
 
- 
+## Mest relevante biostatistics pakker
 
+	• dplyr - Essential shortcuts for subsetting, summarizing, rearranging, and joining together data sets.
+	• vcd - Visualization tools and tests for categorical data.
+	• foreign - Want to read a SAS data set into R? Or an SPSS data set?
+	• tidyr - Tools for changing the layout of your data sets. Use the gather and spread functions to convert your data into the tidy format.
+	• multcomp - Tools for multiple comparison testing.
+	• survival - Tools for survival analysis
 
- 
-Korrekt og konsistent formatering og type af data
-Data til import i R::
-Indlæs data fra Excel
-Indlæs data fra SAS og SPSS
-Indlæs data fra CSV fil (mellemrum, tabulatur, kolon, komma)
-Kommandoer i konsolen
+## Indbyggede datasæt i R
 
-
-## Mest relevante biostatistics packages:
-
-• dplyr - Essential shortcuts for subsetting, summarizing, rearranging, and joining together data sets.
-• vcd - Visualization tools and tests for categorical data.
-• foreign - Want to read a SAS data set into R? Or an SPSS data set?
-• tidyr - Tools for changing the layout of your data sets. Use the gather and spread functions to convert your data into the tidy format.
-• multcomp - Tools for multiple comparison testing.
-• survival - Tools for survival analysis
-
-## Indbyggede datasæt i R:
-
-http://www.sthda.com/english/wiki/r-built-in-data-sets
+	http://www.sthda.com/english/wiki/r-built-in-data-sets
 
 ## Basale funktioner
 
 ### Se importeret dataværdier i dataframe (tabel)
+
 ```
 > dat
 ```
+
 ### Se alle variable (kolonner) i dataframen (tabellen)
+
 ```
 > ls() 
 ```
+
 ## Lav ny dataframe (tabel) med specifikke variable (kolonner)
+
 ```
 > myvars <- c("v1", "v2", "v3")
 > newdata <- mydata[myvars]
 ```
 
-To choose only certain columns, you use the select() function with syntax such as select(dataframename, columnName1, columnName2). No quotation marks are needed with the column names:
+	To choose only certain columns, you use the select() function with syntax such as select(dataframename, columnName1, columnName2). No quotation marks are needed with the column names
+	
 ```
 > select(mtcars, mpg, hp)
 ```
  
 
 ## Visualiser data 
-
 
  
 To load data

@@ -9,147 +9,89 @@
 ### Working directory
 #### Se aktuelle
 ```
-getwd()
+> getwd()
 ```
 #### Skift
 ```
-setwd(“C://file/path”)
+> setwd(“C://file/path”)
+
+eller 
+
+> setwd("~/Test")
 ```
 ### Installer relevante pakker
 ```
-install.packages("<the package's name>")
+> install.packages("<the package's name>")
 ```
 
 #### Load pakke
 ```
-library(<the package's name>)
+> library(<the package's name>)
 ```
 
-### Importer eller åben data
+### Importer eller åbn data
 ```
-read.csv(file=”myfile”)
+> read.csv(file=”myfile”)
 ```
+
+### Gem tabelformateret data fra fil til tabel i R
+```
+> dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1)
+```
+• “dat” Kaldes en dataframe, hvis “filename” er formateret som en tabel. Derfor indeholder en dataframe kolonner og rækker med data.
+• If every column contains a title, then argument should be header=TRUE (or header=T), otherwise header=F.
+• If the file is tab-delimited (there is a tab between every column), then sep=”\t”. Other options are, e.g., sep=”,” and sep=” ”
+• If every case (row) has it’s own unambiquous (non-repeating) title, and the first column of the file contains these row names, then row.names=1, otherwise the argument should be deleted.
 
 
 ## Diskriptiv statistik
+
 ### Funktioner
 
-#### 1. sapply()
-##### sapply - Possible functions used in sapply include mean, sd, var, min, max, median, range, and quantile.
-
-#### 2. summary(mydata)
-### summary - mean,median,25th and 75th quartiles,min,max
-
-#### 3. describe(mydata)
+#### 1. Indbygget
 ```
-library(Hmisc)
-describe(mydata) 
+> sapply(mydata) 
+```
+Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
+
+#### 2. Indbygget
+```
+> summary(mydata)
+```
+Output: mean,median,25th and 75th quartiles,min,max
+
+#### 3. Hmisc-pakken
+```
+> install.packages("hmisc")
+> library(Hmisc)
+> describe(mydata) 
 ```
 Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
 
-#### 4. stat.desc(mydata)
-
+#### 4. Pastecs-pakken
 ```
-library(pastecs)
-stat.desc(mydata) 
+> install.packages("pastecs")
+> library(pastecs)
+> stat.desc(mydata) 
 ```
 Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
 
-
-#### 5. describe(mydata)
+#### 5. Psych-pakken
 ```
-library(psych)
-describe(mydata)
+> install.packages("psych")
+> library(psych)
+> describe(mydata)
 ```
 Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
 
 
-#### 6. 
-
-
 ## Statistisk analyse
+ 
+## Eksporter eller gem data i fil
+```
+> write.table(dat, ”dat.txt”, sep=”\t”, quote=F, row.names=T, col.names=T)
+```
 
-
-## Eksporter eller gem data
-
-## Ad diskriptiv statistik
-
-
-
-## Ad diskriptiv statistik
-
-
-Opsætning
-Arbejdsbibliotek ("working directory")
-
-Definér: setwd("~/Test") eller 
-
-Klargør rådata
-Korrekt og konsistent formatering og type af data
-Data til import i R::
-Indlæs data fra Excel
-Indlæs data fra SAS og SPSS
-Indlæs data fra CSV fil (mellemrum, tabulatur, kolon, komma)
-Kommandoer i konsolen
-Åben data 
-Load relevant pakke*. Mest relevante biostatistics packages:
-
-dplyr - Essential shortcuts for subsetting, summarizing, rearranging, and joining together data sets.
-vcd - Visualization tools and tests for categorical data.
-foreign - Want to read a SAS data set into R? Or an SPSS data set?
-tidyr - Tools for changing the layout of your data sets. Use the gather and spread functions to convert your data into the tidy format.
-multcomp - Tools for multiple comparison testing.
-survival - Tools for survival analysis
-
-
-
-
-library("<the package's name>")
-
-
-
-Importer data fra fil:
-
-dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1)
-
-“dat” som det er anført ovenfor i a. Kaldes en dataframe, hvis “filename” er formateret som en tabel. Derfor indeholder en dataframe kolonner og rækker med data.
-
-If every column contains a title, then argument should be header=TRUE (or header=T), otherwise header=F.
-
-If the file is tab-delimited (there is a tab between every column), then sep=”\t”. Other options are, e.g., sep=”,” and sep=” ”
-If every case (row) has it’s own unambiquous (non-repeating) title, and the first column of the file contains these row names, then row.names=1, otherwise the argument should be deleted.
-
- 3. Benyt indbyggede datasæt i R:
-
-http://www.sthda.com/english/wiki/r-built-in-data-sets
-
-Arbejd med data
-Basal datamanipulation
-
-Se importeret data værdier i dataframen (tabellen): > dat
-
-Se alle variable (kolonner) i dataframen (tabellen): > ls() 
-
-Lav ny dataframe (tabel) med specifikke variable (kolonner): > 
-
-# select variables v1, v2, v3
-myvars <- c("v1", "v2", "v3")
-newdata <- mydata[myvars]
-
-To choose only certain columns, you use the select() function with syntax such as select(dataframename, columnName1, columnName2). No quotation marks are needed with the column names:
-
-select(mtcars, mpg, hp)
-
-Statistiske tests
-
-Deskriptiv Statistik
-Statistiske funktioner til case-control studies 
-
-	http://rpubs.com/kaz_yos/case-control1
-Visualiser data 
-Gem data 
-write.table(dat, ”dat.txt”, sep=”\t”, quote=F,
-row.names=T, col.names=T)
 • dat name of the table in R
 • ”dat.txt” name of the file on disk
 • sep=”\t” use tabs to separate columns
@@ -157,9 +99,67 @@ row.names=T, col.names=T)
 • row.names=T write out row names (or F if there are no row names)
 • col.names=T write out column names
 
+ 
 
-*Nyttige R-packages
 
+ 
+Korrekt og konsistent formatering og type af data
+Data til import i R::
+Indlæs data fra Excel
+Indlæs data fra SAS og SPSS
+Indlæs data fra CSV fil (mellemrum, tabulatur, kolon, komma)
+Kommandoer i konsolen
+
+
+## Mest relevante biostatistics packages:
+
+• dplyr - Essential shortcuts for subsetting, summarizing, rearranging, and joining together data sets.
+• vcd - Visualization tools and tests for categorical data.
+• foreign - Want to read a SAS data set into R? Or an SPSS data set?
+• tidyr - Tools for changing the layout of your data sets. Use the gather and spread functions to convert your data into the tidy format.
+• multcomp - Tools for multiple comparison testing.
+• survival - Tools for survival analysis
+
+get means for variables in data frame mydata
+
+
+
+ 
+
+
+## Indbyggede datasæt i R:
+
+http://www.sthda.com/english/wiki/r-built-in-data-sets
+
+ 
+## Basale funktioner
+
+### Se importeret dataværdier i dataframe (tabel)
+
+> dat
+
+### Se alle variable (kolonner) i dataframen (tabellen)
+
+> ls() 
+
+## Lav ny dataframe (tabel) med specifikke variable (kolonner)
+
+> myvars <- c("v1", "v2", "v3")
+> newdata <- mydata[myvars]
+
+To choose only certain columns, you use the select() function with syntax such as select(dataframename, columnName1, columnName2). No quotation marks are needed with the column names:
+
+> select(mtcars, mpg, hp)
+
+ 
+Statistiske funktioner til case-control studies 
+
+	http://rpubs.com/kaz_yos/case-control1
+
+## Visualiser data 
+
+
+ 
 To load data
 RMySQL, RPostgresSQL, RSQLite - If you'd like to read in data from a database, these packages are a good place to start. Choose the package that fits your type of database.
 

@@ -7,28 +7,63 @@
 #### RStudio (https://www.rstudio.com/)
 
 ### Working directory
-#### Se aktuelle: getwd()
-#### Vælg nyt: setwd(“C://file/path”)
-
+#### Se aktuelle
+```
+getwd()
+```
+#### Skift
+```
+setwd(“C://file/path”)
+```
 ### Installer relevante pakker
-#### Packages -> Select repository
-#### Packages  -> Install packages
-#### install.packages("<the package's name>")
+```
+install.packages("<the package's name>")
+```
 
-#### Load pakke: library(<the package's name>)
+#### Load pakke
+```
+library(<the package's name>)
+```
 
 ### Importer eller åben data
-####read.csv(file=”myfile”)
-
+```
+read.csv(file=”myfile”)
+```
 
 
 ## Diskriptiv statistik
 ### Funktioner
-#### 1. sapply() *1
+
+#### 1. sapply()
+##### sapply - Possible functions used in sapply include mean, sd, var, min, max, median, range, and quantile.
+
 #### 2. summary(mydata)
+### summary - mean,median,25th and 75th quartiles,min,max
+
 #### 3. describe(mydata)
+```
+library(Hmisc)
+describe(mydata) 
+```
+Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
+
 #### 4. stat.desc(mydata)
+
+```
+library(pastecs)
+stat.desc(mydata) 
+```
+Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
+
+
 #### 5. describe(mydata)
+```
+library(psych)
+describe(mydata)
+```
+Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
+
+
 #### 6. 
 
 
@@ -37,7 +72,11 @@
 
 ## Eksporter eller gem data
 
-Installering
+## Ad diskriptiv statistik
+
+
+
+## Ad diskriptiv statistik
 
 
 Opsætning

@@ -14,9 +14,9 @@
 #### Skift
 ```
 > setwd(“C://file/path”)
-
+```
 eller 
-
+```
 > setwd("~/Test")
 ```
 ### Installer relevante pakker
@@ -24,7 +24,7 @@ eller
 > install.packages("<the package's name>")
 ```
 
-#### Load pakke
+### Load pakke
 ```
 > library(<the package's name>)
 ```
@@ -84,8 +84,11 @@ Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, C
 ```
 Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
 
+## Statistiske analyser
+### Statistiske funktioner til case-control studies 
+	http://rpubs.com/kaz_yos/case-control1
 
-## Statistisk analyse
+
  
 ## Eksporter eller gem data i fil
 ```
@@ -120,41 +123,31 @@ Kommandoer i konsolen
 • multcomp - Tools for multiple comparison testing.
 • survival - Tools for survival analysis
 
-get means for variables in data frame mydata
-
-
-
- 
-
-
 ## Indbyggede datasæt i R:
 
 http://www.sthda.com/english/wiki/r-built-in-data-sets
 
- 
 ## Basale funktioner
 
 ### Se importeret dataværdier i dataframe (tabel)
-
+```
 > dat
-
+```
 ### Se alle variable (kolonner) i dataframen (tabellen)
-
+```
 > ls() 
-
+```
 ## Lav ny dataframe (tabel) med specifikke variable (kolonner)
-
+```
 > myvars <- c("v1", "v2", "v3")
 > newdata <- mydata[myvars]
+```
 
 To choose only certain columns, you use the select() function with syntax such as select(dataframename, columnName1, columnName2). No quotation marks are needed with the column names:
-
+```
 > select(mtcars, mpg, hp)
-
+```
  
-Statistiske funktioner til case-control studies 
-
-	http://rpubs.com/kaz_yos/case-control1
 
 ## Visualiser data 
 
@@ -195,7 +188,7 @@ network3D (network graphs)
 threeJS (3D scatterplots and globes).
  
 
-googleVis - Let's you use Google Chart tools to visualize data in R. Google Chart tools used to be called Gapminder, the graphing software Hans Rosling made famous in hie TED talk.
+- googleVis - Let's you use Google Chart tools to visualize data in R. Google Chart tools used to be called Gapminder, the graphing software Hans Rosling made famous in hie TED talk.
 
 To model data
 car - car's Anova function is popular for making type II and type III Anova tables.

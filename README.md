@@ -19,7 +19,7 @@
 > setwd(“C://file/path”)
 ```
 
-    Eller 
+> > Eller 
 
 ```
 > setwd("~/Test")
@@ -66,7 +66,6 @@
 ```
 > sapply(mydata)
 ```
-
 	Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
 
 #### 2. Indbygget
@@ -74,7 +73,6 @@
 ```
 > summary(mydata)
 ```
-
 	Output: mean,median,25th and 75th quartiles,min,max
 
 #### 3. Hmisc-pakken
@@ -84,7 +82,6 @@
 > library(Hmisc)
 > describe(mydata) 
 ```
-
 	Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
 
 #### 4. Pastecs-pakken
@@ -94,7 +91,6 @@
 > library(pastecs)
 > stat.desc(mydata) 
 ```
-
 	Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
 
 #### 5. Psych-pakken
@@ -104,14 +100,13 @@
 > library(psych)
 > describe(mydata)
 ```
-
 	Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
 
 ## Statistiske analyser
 
 ### Case-control studies
 
-	http://rpubs.com/kaz_yos/case-control1
+	<http://rpubs.com/kaz_yos/case-control1>
 
 ## Eksporter eller gem data i fil
 
@@ -163,14 +158,11 @@
 > newdata <- mydata[myvars]
 ```
 
-### Choose only certain columns with syntax such as select(dataframename, columnName1, columnName2).
+### Choose only certain columns with select(dataframename, columnName1, columnName2).
 		
 ```
 > select(mtcars, mpg, hp)
 ```
- 
-
-## Visualiser data 
 
 ## Nyttige funktioner og pakker
 
@@ -198,7 +190,7 @@
 	read.csv, read.table, and read.fwf.
 	```
 
-## Visualize data
+## Visualiser data
 
 	ggplot2 - R's famous package for making beautiful graphics.
 
@@ -239,7 +231,7 @@
 	caret - Tools for training regression and classification models
 
 
-## To report results
+## Report results
 	
 	shiny - Easily make interactive, web apps with R.
 
@@ -248,7 +240,7 @@
 	xtable - The xtable function takes an R object (like a data frame) and returns the latex or HTML code to embed.
 
 
-## For Spatial data
+## Spatial data
 
 	sp, maptools - Tools for loading and using spatial data including shapefiles.
 
@@ -257,7 +249,7 @@
 	ggmap - Download street maps straight from Google maps and use them as a background in your ggplots.
 
 
-## For Time Series and Financial data
+## Time Series and Financial data
 
 	zoo - Provides the most popular format for saving time series objects in R.
 
@@ -266,7 +258,7 @@
 	quantmod - Tools for downloading financial data, plotting common charts, and doing technical analysis.
 
 
-## To write high performance R code
+## High performance R code
 	
 	Rcpp - Write R functions that call C++ code for lightning fast speed.
 
@@ -275,7 +267,7 @@
 	parallel - Use parallel processing in R to speed up your code or to crunch large data sets.
 
 
-## To work with the web
+## Work with the web
 
 	XML - Read and create XML documents with R
 
@@ -283,7 +275,7 @@
 
 	httr - A set of useful tools for working with http connections
 
-## Rest
+## Diverse
 
 	testthat - testthat provides an easy way to write unit tests for your code projects.
 

@@ -1,2 +1,3 @@
-# Institutioner
-## Datatilsynet
+# RStudio - Survival guide
+## Opsætning
+

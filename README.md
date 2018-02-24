@@ -3,51 +3,53 @@
 ## Indhold
 ------
 
-#### 1. Opsætning
+### 1. Opsætning
 
-2. Installér R
+### 2. Installér R
 
-3. Arbejdsbibliotek
+### 3. Arbejdsbibliotek
 
-4. Pakker
+### 4. Pakker
 
-5. Indlæs data
+### 5. Indlæs data
 
-6. Basale funktioner
+### 6. Basale funktioner
 
-7. Statististiske funktioner
+### 7. Statististiske funktioner
 
-8. Datavisualisering
+### 8. Datavisualisering
 
-9. Gem eller eksport data
+### 9. Gem eller eksport data
 
-10. Ressourcer
+### 10. Ressourcer
+
 
 
 ## Opsætning
 ------
 
-1. Installér R
+### 1. Installér R
 
-1.1 R-statistics: <https://www.r-project.org/>
+	R-statistics: <https://www.r-project.org/>
 
-1.2. RStudio: <https://www.rstudio.com/>
+	RStudio: <https://www.rstudio.com/>
 
 
-## Arbejdsbibliotek
-	------
+### 2. Arbejdsbibliotek
 
-1. Aktuelle
+	1. Aktuelle
 
-``` > getwd() ```
+	``` > getwd() ```
+	
 
-2. Skift
+	2. Skift
 
-``` > setwd(“C://file/path”) ```
+	``` > setwd(“C://file/path”) ```
 
-Eller  
+	Eller  
 
-``` > setwd("~/Test") ```
+	``` > setwd("~/Test") ```
+
 
 ## Installer pakker
 ------
@@ -70,41 +72,44 @@ Eller
 ## Basale Funktioner
 ------
 
-1. Se importeret dataværdier i dataframe (tabel)
+### 1. Se importeret dataværdier i dataframe (tabel)
 
 ``` > dat ```
     
-2. Se alle variable (kolonner) i dataframen (tabellen)
+### 2. Se alle variable (kolonner) i dataframen (tabellen)
     
 ``` > ls() ```
     
-3. Lav ny dataframe (tabel) med specifikke variable (kolonner)
+### 3. Lav ny dataframe (tabel) med specifikke variable (kolonner)
+
 
 ```
 > myvars <- c("v1", "v2", "v3")
 > newdata <- mydata[myvars]
 ```
 
-4. Vælg individuelle variable (kolonner)
+### 4. Vælg individuelle variable (kolonner)
+
     
 ``` > select(mtcars, mpg, hp) ```
+
 
 ## Diskriptiv statistik
 ------
 
-1. Indbygget
+### 1. Indbygget
 
 ``` > sapply(mydata) ```
 
-#### Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
+##### Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
 
 
 ``` > summary(mydata) ```
 
-#### Output: mean, median, 25th and 75th quartiles, min, max
+##### Output: mean, median, 25th and 75th quartiles, min, max
 
 
-2. Hmisc-pakken
+### 2. Hmisc-pakken
 
 ```
 > install.packages("hmisc")
@@ -112,11 +117,10 @@ Eller
 > describe(mydata) 
 ```
 
-#### Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
+##### Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
 
 
-3. Pastecs-pakken
-------
+## 3. Pastecs-pakken
 
 ```
 > install.packages("pastecs")
@@ -124,11 +128,11 @@ Eller
 > stat.desc(mydata) 
 ```
 
-#### Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
+##### Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
 
 
 5. Psych-pakken
-------
+
 
 ```
 > install.packages("psych")
@@ -136,7 +140,7 @@ Eller
 > describe(mydata)
 ```
 
-#### Output: item name, item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
+##### Output: item name, item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
 
 
 ## Gem tabelformateret data fra fil til tabel i R
@@ -175,7 +179,6 @@ Eller
  <http://rpubs.com/kaz_yos/case-control1/>
 
 
-
 ## Mest relevante pakker til biostatistik
 ------
 
@@ -200,75 +203,81 @@ Eller
 #### Indlæs data fra database
         
 ``` RMySQL, RPostgresSQL, RSQLite ```
+
         
 #### Indlæs og skriv data til Excel
         
 ``` XLConnect, xlsx ```
+
         
 #### Indlæs data fra SAS, SPSS mv. i R
         
 ``` foreign ```
+
         
 #### Indlæs data fra tekstfiler (indbygget i R)
         
 ``` read.csv, read.table, and read.fwf. ```
+
         
 ## Visualiser data
 ------
-    
-#### Indlæs dine data
+ 
         
-##### 1. Indlæs din dataframe (data i tabelformat)
+#### 1. Indlæs din dataframe (data i tabelformat)
                         
-                ``` grafdata <- read.table("minedata.txt", header = TRUE) ```
+``` grafdata <- read.table("minedata.txt", header = TRUE) ```
 		
-               ``` grafdata <- read.csv("minedata.csv") ```
+Eller
+		
+``` grafdata <- read.csv("minedata.csv") ```
+	       
                 
-##### 2. Basal datavisualisering
+#### 2. Basal datavisualisering
                 
-1.1. Histogram
+##### Histogram
                 
 Brug den indbyggede funktion hist()
                 
-                ``` > hist(grafdata) ```
+``` > hist(grafdata) ```
                 
-2. Box Plot
+##### Box Plot
                 
 Brug den indbyggede funktion boxplot()
                         
-                ``` > boxplot(grafdata) ```
+``` > boxplot(grafdata) ```
      
      
-##### 3. Udviddet datavisualisering
+#### 3. Udviddet datavisualisering
         
-Brug datavisualiseringspakker, eksempelvis den populære ggvis()
+##### Brug datavisualiseringspakker, eksempelvis den populære ggvis()
         
-                1. ``` install.packages("ggvis") ```
+``` install.packages("ggvis") ```
 		
                 
-                2. ``` library(ggvis) ```
-                
-             
+``` library(ggvis) ```
+               
         
-Flere ppopulære pakker til datavisualisering
+##### Flere populære pakker til datavisualisering
         
-        - ggplot2 - R's famous package for making beautiful graphics.
+- ggplot2 - R's famous package for making beautiful graphics.
 
-        - ggvis - Interactive, web based graphics built with the grammar of graphics.
+- ggvis - Interactive, web based graphics built with the grammar of graphics.
 
-        - rgl - Interactive 3D visualizations with R.
+- rgl - Interactive 3D visualizations with R.
 
-        - htmlwidgets - A fast way to build interactive (javascript based) visualizations with R. 
-        
-                - Packages that implement htmlwidgets include:
+- htmlwidgets - A fast way to build interactive (javascript based) visualizations with R. 
 
-                        - leaflet (maps)
-                        - dygraphs (time series)
-                        - - DT (tables)
-                        - diagrammeR (diagrams)
-                        - network3D (network graphs)
-                        - threeJS (3D scatterplots and globes)
-                         - googleVis - Let's you use Google Chart tools to visualize data in R. 
+ - - Packages that implement htmlwidgets include:
+
+	- leaflet (maps)
+	- dygraphs (time series)
+	- DT (tables)
+	- diagrammeR (diagrams)
+	- network3D (network graphs)
+	- threeJS (3D scatterplots and globes)
+	- googleVis - Let's you use Google Chart tools to visualize data in R. 
+
 
 ## 6. Model data
 ------
@@ -337,7 +346,7 @@ Flere ppopulære pakker til datavisualisering
 
 - testthat - testthat provides an easy way to write unit tests for your code projects.
 
- roxygen2 - Document your R packages, turns inline code comments into pages.
+ - roxygen2 - Document your R packages, turns inline code comments into pages.
 
 
 ## 12. Yderligere ressourcer

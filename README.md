@@ -395,11 +395,16 @@ library(ggvis)
 
 - testthat - testthat provides an easy way to write unit tests for your code projects.
 
- - roxygen2 - Document your R packages, turns inline code comments into pages.
+- roxygen2 - Document your R packages, turns inline code comments into pages.
 
 
 ## 12. Yderligere ressourcer
 ------
+* https://www.statmethods.net/
+
+* https://www.r-bloggers.com/
+
+* https://rseek.org/
 
 * <https://support.rstudio.com/hc/en-us/articles/200552336>
         

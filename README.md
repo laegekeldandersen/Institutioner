@@ -30,43 +30,56 @@
 
 ### 1. Installér R
 
-	R-statistics: <https://www.r-project.org/>
+* R-statistics: <https://www.r-project.org/>
 
-	RStudio: <https://www.rstudio.com/>
+
+* RStudio: <https://www.rstudio.com/>
 
 
 ### 2. Arbejdsbibliotek
 
-	1. Aktuelle
+1. Aktuelle
 
-	``` > getwd() ```
+```
+> getwd() 
+```
 	
 
-	2. Skift
+2. Skift
 
-	``` > setwd(“C://file/path”) ```
+```
+> setwd(“C://file/path”) 
+```
 
-	Eller  
+Eller  
 
-	``` > setwd("~/Test") ```
+```
+> setwd("~/Test") 
+```
 
 
 ## Installer pakker
 ------
 
-``` > install.packages("<the package's name>") ```
+``` 
+> install.packages("<the package's name>")
+```
 
 
 ## Indlæs pakke
 ------
 
-``` > library(<the package's name>) ```
+```
+> library(<the package's name>) 
+```
 
 
 ## Indlæs data
 ------
 
-``` > read.csv(file=”myfile”) ```
+```
+> read.csv(file=”myfile”)
+```
 
 
 ## Basale Funktioner
@@ -74,24 +87,31 @@
 
 ### 1. Se importeret dataværdier i dataframe (tabel)
 
-``` > dat ```
+``` 
+> dat
+```
     
 ### 2. Se alle variable (kolonner) i dataframen (tabellen)
     
-``` > ls() ```
+``` 
+> ls() 
+```
     
 ### 3. Lav ny dataframe (tabel) med specifikke variable (kolonner)
 
 
 ```
 > myvars <- c("v1", "v2", "v3")
+
+
 > newdata <- mydata[myvars]
 ```
 
 ### 4. Vælg individuelle variable (kolonner)
-
     
-``` > select(mtcars, mpg, hp) ```
+```
+> select(mtcars, mpg, hp)
+```
 
 
 ## Diskriptiv statistik
@@ -99,12 +119,16 @@
 
 ### 1. Indbygget
 
-``` > sapply(mydata) ```
+``` 
+> sapply(mydata)
+```
 
 ##### Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
 
 
-``` > summary(mydata) ```
+``` 
+> summary(mydata)
+```
 
 ##### Output: mean, median, 25th and 75th quartiles, min, max
 
@@ -146,27 +170,31 @@
 ## Gem tabelformateret data fra fil til tabel i R
 ------
 
-``` > dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1) ```
+```
+> dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1)
+```
 
-        • “dat” Kaldes en dataframe, hvis den er formateret som en tabel. 
-        • Derfor indeholder en dataframe kolonner og rækker med data.
-        • If every column contains a title, then argument should be header=TRUE (or header=T), otherwise header=F.
-        • If the file is tab-delimited, then sep=”\t”. Other options are, e.g., sep=”,” and sep=” ”.
-        • If every case (row) has it’s own non-repeating title, and the first column of the file contains these row name
-        • then row.names=1, otherwise the argument should be deleted.
+• “dat” Kaldes en dataframe, hvis den er formateret som en tabel. 
+• Derfor indeholder en dataframe kolonner og rækker med data.
+• If every column contains a title, then argument should be header=TRUE (or header=T), otherwise header=F.
+• If the file is tab-delimited, then sep=”\t”. Other options are, e.g., sep=”,” and sep=” ”.
+• If every case (row) has it’s own non-repeating title, and the first column of the file contains these row name
+• then row.names=1, otherwise the argument should be deleted.
 
 
 ## Eksporter eller gem data i fil
 ------
 
-``` > write.table(dat, ”dat.txt”, sep=”\t”, quote=F, row.names=T, col.names=T) ```
+```
+> write.table(dat, ”dat.txt”, sep=”\t”, quote=F, row.names=T, col.names=T)
+```
 
-        • dat name of the table in R
-        • ”dat.txt” name of the file on disk
-        • sep=”\t” use tabs to separate columns
-        • quote=F don’t quote anything, not even text
-        • row.names=T write out row names (or F if there are no row names)
-        • col.names=T write out column names
+• dat name of the table in R
+• ”dat.txt” name of the file on disk
+• sep=”\t” use tabs to separate columns
+• quote=F don’t quote anything, not even text
+• row.names=T write out row names (or F if there are no row names)
+• col.names=T write out column names
 
 
 ## Statistiske analyser
@@ -176,7 +204,7 @@
 ### 1. Case-control studies
 ------
 
- <http://rpubs.com/kaz_yos/case-control1/>
+* <http://rpubs.com/kaz_yos/case-control1/>
 
 
 ## Mest relevante pakker til biostatistik
@@ -194,7 +222,8 @@
 
 ## Indbyggede datasæt i R
 ------
-        <http://www.sthda.com/english/wiki/r-built-in-data-sets/>
+
+* <http://www.sthda.com/english/wiki/r-built-in-data-sets/>
 
 
 ## Nyttige funktioner og pakker
@@ -202,23 +231,27 @@
 
 #### Indlæs data fra database
         
-``` RMySQL, RPostgresSQL, RSQLite ```
-
+``` 
+RMySQL, RPostgresSQL, RSQLite 
+```
         
 #### Indlæs og skriv data til Excel
         
-``` XLConnect, xlsx ```
-
+```
+XLConnect, xlsx 
+```
         
 #### Indlæs data fra SAS, SPSS mv. i R
         
-``` foreign ```
-
+```
+foreign 
+```
         
 #### Indlæs data fra tekstfiler (indbygget i R)
         
-``` read.csv, read.table, and read.fwf. ```
-
+```
+read.csv, read.table, and read.fwf. 
+```
         
 ## Visualiser data
 ------
@@ -226,12 +259,15 @@
         
 #### 1. Indlæs din dataframe (data i tabelformat)
                         
-``` grafdata <- read.table("minedata.txt", header = TRUE) ```
+```
+grafdata <- read.table("minedata.txt", header = TRUE)
+```
 		
 Eller
 		
-``` grafdata <- read.csv("minedata.csv") ```
-	       
+``` 
+grafdata <- read.csv("minedata.csv") 
+```
                 
 #### 2. Basal datavisualisering
                 
@@ -239,24 +275,29 @@ Eller
                 
 Brug den indbyggede funktion hist()
                 
-``` > hist(grafdata) ```
+```
+> hist(grafdata) 
+```
                 
 ##### Box Plot
                 
 Brug den indbyggede funktion boxplot()
                         
-``` > boxplot(grafdata) ```
-     
+```
+> boxplot(grafdata) 
+```     
      
 #### 3. Udviddet datavisualisering
         
 ##### Brug datavisualiseringspakker, eksempelvis den populære ggvis()
         
-``` install.packages("ggvis") ```
-		
-                
-``` library(ggvis) ```
-               
+```
+install.packages("ggvis") 
+```
+		             
+``` 
+library(ggvis) 
+```            
         
 ##### Flere populære pakker til datavisualisering
         
@@ -268,7 +309,7 @@ Brug den indbyggede funktion boxplot()
 
 - htmlwidgets - A fast way to build interactive (javascript based) visualizations with R. 
 
- - - Packages that implement htmlwidgets include:
+   - Packages that implement htmlwidgets include:
 
 	- leaflet (maps)
 	- dygraphs (time series)
@@ -352,6 +393,6 @@ Brug den indbyggede funktion boxplot()
 ## 12. Yderligere ressourcer
 ------
 
- <https://support.rstudio.com/hc/en-us/articles/200552336>
+* <https://support.rstudio.com/hc/en-us/articles/200552336>
         
- <https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ>
+* <https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ>

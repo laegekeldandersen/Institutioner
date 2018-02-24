@@ -1,144 +1,144 @@
-	# RStudio - Survival guide
-	------
 	## Indhold
+------
+# RStudio - Survival guide
+
+#### 1. Opsætning
+
+2. Installér R
+
+3. Arbejdsbibliotek
+
+4. Pakker
+
+5. Indlæs data
+
+6. Basale funktioner
+
+7. Statististiske funktioner
+
+8. Datavisualisering
+
+9. Gem eller eksport data
+
+10. Ressourcer
+
+
+## Opsætning
+------
+
+1. Installér R
+
+1.1 R-statistics: <https://www.r-project.org/>
+
+1.2. RStudio: <https://www.rstudio.com/>
+
+
+## Arbejdsbibliotek
 	------
-	1. Opsætning
-	
-	2. Installér R
-	
-	3. Arbejdsbibliotek
-	
-	4. Pakker
-	
-	5. Indlæs data
-	
-	6. Basale funktioner
-	
-	7. Statististiske funktioner
-	
-	8. Datavisualisering
-	
-	9. Gem eller eksport data
-	
-	10. Ressourcer
-	
-	
-	## Opsætning
-	------
-	
-	1. Installér R
 
-	1.1 R-statistics: <https://www.r-project.org/>
-	
-	1.2. RStudio: <https://www.rstudio.com/>
+1. Aktuelle
 
- 
-	## Arbejdsbibliotek
-		------
- 
-	1. Aktuelle
+``` > getwd() ```
 
-	``` > getwd() ```
+2. Skift
 
-	2. Skift
+``` > setwd(“C://file/path”) ```
 
-	``` > setwd(“C://file/path”) ```
+Eller  
 
-	Eller  
+``` > setwd("~/Test") ```
 
-	``` > setwd("~/Test") ```
+## Installer pakker
+------
 
-	## Installer pakker
-	------
-	
-	``` > install.packages("<the package's name>") ```
+``` > install.packages("<the package's name>") ```
 
 
-	## Indlæs pakke
-	------
-	
-	``` > library(<the package's name>) ```
+## Indlæs pakke
+------
 
-	
-	## Indlæs data
-	------
-	
-	``` > read.csv(file=”myfile”) ```
-	
-	
-	## Basale Funktioner
-	------
-	
-	1. Se importeret dataværdier i dataframe (tabel)
+``` > library(<the package's name>) ```
 
-	``` > dat ```
-        
-	2. Se alle variable (kolonner) i dataframen (tabellen)
-        
-	``` > ls() ```
-        
-	3. Lav ny dataframe (tabel) med specifikke variable (kolonner)
 
-	```
-	> myvars <- c("v1", "v2", "v3")
-	> newdata <- mydata[myvars]
-	```
-	
-	4. Vælg individuelle variable (kolonner)
-        
-	``` > select(mtcars, mpg, hp) ```
-	
-	## Diskriptiv statistik
-	------
-	
-	1. Indbygget
+## Indlæs data
+------
 
-	``` > sapply(mydata) ```
+``` > read.csv(file=”myfile”) ```
 
-	#### Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
 
-	
-	``` > summary(mydata) ```
+## Basale Funktioner
+------
 
-	#### Output: mean, median, 25th and 75th quartiles, min, max
+1. Se importeret dataværdier i dataframe (tabel)
 
-	
-	2. Hmisc-pakken
+``` > dat ```
+    
+2. Se alle variable (kolonner) i dataframen (tabellen)
+    
+``` > ls() ```
+    
+3. Lav ny dataframe (tabel) med specifikke variable (kolonner)
 
-	```
-	> install.packages("hmisc")
-	> library(Hmisc)
-	> describe(mydata) 
-	```
-	
-	#### Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
+```
+> myvars <- c("v1", "v2", "v3")
+> newdata <- mydata[myvars]
+```
 
-	
-	3. Pastecs-pakken
-	------
-	
-	```
-	> install.packages("pastecs")
-	> library(pastecs)
-	> stat.desc(mydata) 
-	```
-	
-	#### Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
+4. Vælg individuelle variable (kolonner)
+    
+``` > select(mtcars, mpg, hp) ```
 
-	
-	5. Psych-pakken
-	------
-	
-	```
-	> install.packages("psych")
-	> library(psych)
-	> describe(mydata)
-	```
-	
-	#### Output: item name, item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
+## Diskriptiv statistik
+------
 
-	
-	
+1. Indbygget
+
+``` > sapply(mydata) ```
+
+#### Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
+
+
+``` > summary(mydata) ```
+
+#### Output: mean, median, 25th and 75th quartiles, min, max
+
+
+2. Hmisc-pakken
+
+```
+> install.packages("hmisc")
+> library(Hmisc)
+> describe(mydata) 
+```
+
+#### Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
+
+
+3. Pastecs-pakken
+------
+
+```
+> install.packages("pastecs")
+> library(pastecs)
+> stat.desc(mydata) 
+```
+
+#### Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
+
+
+5. Psych-pakken
+------
+
+```
+> install.packages("psych")
+> library(psych)
+> describe(mydata)
+```
+
+#### Output: item name, item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
+
+
+
 	Gem tabelformateret data fra fil til tabel i R
 ---
 `` > dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1) ``

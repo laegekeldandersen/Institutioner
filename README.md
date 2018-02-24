@@ -173,13 +173,17 @@ Eller
 ```
 > dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1)
 ```
+* “dat” Kaldes en dataframe, hvis den er formateret som en tabel. 
 
-• “dat” Kaldes en dataframe, hvis den er formateret som en tabel. 
-• Derfor indeholder en dataframe kolonner og rækker med data.
-• If every column contains a title, then argument should be header=TRUE (or header=T), otherwise header=F.
-• If the file is tab-delimited, then sep=”\t”. Other options are, e.g., sep=”,” and sep=” ”.
-• If every case (row) has it’s own non-repeating title, and the first column of the file contains these row name
-• then row.names=1, otherwise the argument should be deleted.
+* Derfor indeholder en dataframe kolonner og rækker med data.
+
+* If every column contains a title, then argument should be header=TRUE (or header=T), otherwise header=F.
+
+* If the file is tab-delimited, then sep=”\t”. Other options are, e.g., sep=”,” and sep=” ”.
+
+* If every case (row) has it’s own non-repeating title, and the first column of the file contains these row name
+
+* then row.names=1, otherwise the argument should be deleted.
 
 
 ## Eksporter eller gem data i fil
@@ -188,13 +192,17 @@ Eller
 ```
 > write.table(dat, ”dat.txt”, sep=”\t”, quote=F, row.names=T, col.names=T)
 ```
+* dat name of the table in R
 
-• dat name of the table in R
-• ”dat.txt” name of the file on disk
-• sep=”\t” use tabs to separate columns
-• quote=F don’t quote anything, not even text
-• row.names=T write out row names (or F if there are no row names)
-• col.names=T write out column names
+* ”dat.txt” name of the file on disk
+
+* sep=”\t” use tabs to separate columns
+
+* quote=F don’t quote anything, not even text
+
+* row.names=T write out row names (or F if there are no row names)
+
+* col.names=T write out column names
 
 
 ## Statistiske analyser

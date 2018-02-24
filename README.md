@@ -1,4 +1,5 @@
 # RStudio - Survival guide
+###### With love from K to J, and onwards from J
 ---
 ## Opsætning
 ---
@@ -59,7 +60,7 @@ Eller
 
 `` > summary(mydata) ``
 
-##### Output: mean,median,25th and 75th quartiles,min,max
+##### Output: mean, median, 25th and 75th quartiles, min, max
 
 #### 3. Hmisc-pakken
 
@@ -86,7 +87,7 @@ Eller
 > library(psych)
 > describe(mydata)
 ```
-##### Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
+##### Output: item name, item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
 
 ## Statistiske analyser
 ---
@@ -135,7 +136,7 @@ Eller
 > myvars <- c("v1", "v2", "v3")
 > newdata <- mydata[myvars]
 ```
-### Choose only certain columns with select(dataframename, columnName1, columnName2)
+### Vælg individuelle variable (kolonner)
 	
 `` > select(mtcars, mpg, hp) ``
 	

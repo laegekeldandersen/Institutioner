@@ -139,10 +139,10 @@ Eller
 #### Output: item name, item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
 
 
+## Gem tabelformateret data fra fil til tabel i R
+------
 
-	Gem tabelformateret data fra fil til tabel i R
----
-`` > dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1) ``
+``` > dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1) ```
 
         • “dat” Kaldes en dataframe, hvis den er formateret som en tabel. 
         • Derfor indeholder en dataframe kolonner og rækker med data.
@@ -151,15 +151,11 @@ Eller
         • If every case (row) has it’s own non-repeating title, and the first column of the file contains these row name
         • then row.names=1, otherwise the argument should be deleted.
 
-Statistiske analyser
----
- Case-control studies
----
- <http://rpubs.com/kaz_yos/case-control1/>
 
- Eksporter eller gem data i fil
----
-`` > write.table(dat, ”dat.txt”, sep=”\t”, quote=F, row.names=T, col.names=T) ``
+## Eksporter eller gem data i fil
+------
+
+``` > write.table(dat, ”dat.txt”, sep=”\t”, quote=F, row.names=T, col.names=T) ```
 
         • dat name of the table in R
         • ”dat.txt” name of the file on disk
@@ -167,7 +163,19 @@ Statistiske analyser
         • quote=F don’t quote anything, not even text
         • row.names=T write out row names (or F if there are no row names)
         • col.names=T write out column names
-	
+
+
+## Statistiske analyser
+------
+
+
+### 1. Case-control studies
+------
+
+ <http://rpubs.com/kaz_yos/case-control1/>
+
+
+
 ## Mest relevante pakker til biostatistik
 ------
 
@@ -189,56 +197,60 @@ Statistiske analyser
 ## Nyttige funktioner og pakker
 ------
 
- Indlæs data fra database
+#### Indlæs data fra database
         
-`` RMySQL, RPostgresSQL, RSQLite ``
+``` RMySQL, RPostgresSQL, RSQLite ```
         
- Indlæs og skriv data til Excel
+#### Indlæs og skriv data til Excel
         
-`` XLConnect, xlsx ``
+``` XLConnect, xlsx ```
         
- Indlæs data fra SAS, SPSS mv. i R
+#### Indlæs data fra SAS, SPSS mv. i R
         
-`` foreign ``
+``` foreign ```
         
- Indlæs data fra tekstfiler (indbygget i R)
+#### Indlæs data fra tekstfiler (indbygget i R)
         
-`` read.csv, read.table, and read.fwf. ``
+``` read.csv, read.table, and read.fwf. ```
         
- Visualiser data
----
-         Indlæs dine data
+## Visualiser data
+------
+    
+#### Indlæs dine data
         
-        Indlæs din dataframe (data i tabelformat)
+##### 1. Indlæs din dataframe (data i tabelformat)
                         
-                `` grafdata <- read.table("minedata.txt", header = TRUE) ``
-                `` grafdata <- read.csv("minedata.csv") ``
+                ``` grafdata <- read.table("minedata.txt", header = TRUE) ```
+		
+               ``` grafdata <- read.csv("minedata.csv") ```
                 
-         Basal datavisualisering
+##### 2. Basal datavisualisering
                 
-                1. Histogram
+1.1. Histogram
                 
-                 Brug den indbyggede funktion hist()
+Brug den indbyggede funktion hist()
                 
-                `` > hist(grafdata) ``
+                ``` > hist(grafdata) ```
                 
-                2. Box Plot
+2. Box Plot
                 
-                 Brug den indbyggede funktion boxplot()
+Brug den indbyggede funktion boxplot()
                         
-                `` > boxplot(grafdata) ``
-                
-         Udviddet datavisualisering
+                ``` > boxplot(grafdata) ```
+     
+     
+##### 3. Udviddet datavisualisering
         
-         Brug datavisualiseringspakker, eksempelvis den populære ggvis()
+Brug datavisualiseringspakker, eksempelvis den populære ggvis()
         
-                1. `` install.packages("ggvis") ``
+                1. ``` install.packages("ggvis") ```
+		
                 
-                2. `` library(ggvis) ``
+                2. ``` library(ggvis) ```
                 
-                3. 
+             
         
-         Flere ppopulære pakker til datavisualisering
+Flere ppopulære pakker til datavisualisering
         
         - ggplot2 - R's famous package for making beautiful graphics.
 
@@ -258,7 +270,7 @@ Statistiske analyser
                         - threeJS (3D scatterplots and globes)
                          - googleVis - Let's you use Google Chart tools to visualize data in R. 
 
-6. Model data
+## 6. Model data
 ------
         
 - car - car's Anova function is popular for making type II and type III Anova tables.
@@ -280,7 +292,7 @@ Statistiske analyser
 - caret - Tools for training regression and classification models
 
 
-7. Report results
+## 7. Report results
 ------
         
 - shiny - Easily make interactive, web apps with R.
@@ -290,7 +302,7 @@ Statistiske analyser
 - xtable - The xtable function takes an R object (like a data frame) and returns the latex or HTML code to embed.
 
  
-8. Spatial data
+## 8. Spatial data
 ------
 
 - sp, maptools - Tools for loading and using spatial data including shapefiles.
@@ -300,7 +312,7 @@ Statistiske analyser
 - ggmap - Download street maps straight from Google maps and use them as a background in your ggplots.
 
 
-9. Time Series and Financial data
+## 9. Time Series and Financial data
 ------
 
 - zoo - Provides the most popular format for saving time series objects in R.
@@ -310,8 +322,9 @@ Statistiske analyser
 - quantmod - Tools for downloading financial data, plotting common charts, and doing technical analysis.
 
 
-10. Work with the web
+## 10. Work with the web
 ------
+
 - XML - Read and create XML documents with R
 
 - jsonlite - Read and create JSON data tables with R
@@ -319,14 +332,15 @@ Statistiske analyser
 - httr - A set of useful tools for working with http connections
 
 
-11. Diverse
+## 11. Diverse
 ------
+
 - testthat - testthat provides an easy way to write unit tests for your code projects.
 
  roxygen2 - Document your R packages, turns inline code comments into pages.
 
 
- 12. Yderligere ressourcer
+## 12. Yderligere ressourcer
 ------
 
  <https://support.rstudio.com/hc/en-us/articles/200552336>

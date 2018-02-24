@@ -31,15 +31,11 @@ Eller
 
 ### Importer eller åbn data
 
-```
-> read.csv(file=”myfile”)
-```
+`` > read.csv(file=”myfile”) ``
 
 ### Gem tabelformateret data fra fil til tabel i R
 
-```
-> dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1)
-```
+`` > dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1) ``
 
 	• “dat” Kaldes en dataframe, hvis den er formateret som en tabel. 
 	• Derfor indeholder en dataframe kolonner og rækker med data.
@@ -55,16 +51,14 @@ Eller
 
 #### 1. Indbygget
 
-```
-> sapply(mydata)
-```
+`` > sapply(mydata) ``
+
 	Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
 
 #### 2. Indbygget
 
-```
-> summary(mydata)
-```
+`` > summary(mydata) ``
+
 	Output: mean,median,25th and 75th quartiles,min,max
 
 #### 3. Hmisc-pakken
@@ -98,13 +92,11 @@ Eller
 ---
 ### Case-control studies
 
-#### <http://rpubs.com/kaz_yos/case-control1/>
+#### 1. <http://rpubs.com/kaz_yos/case-control1/>
 
 ## Eksporter eller gem data i fil
 ---
-```
-> write.table(dat, ”dat.txt”, sep=”\t”, quote=F, row.names=T, col.names=T)
-```
+`` > write.table(dat, ”dat.txt”, sep=”\t”, quote=F, row.names=T, col.names=T) ``
 
 	• dat name of the table in R
 	• ”dat.txt” name of the file on disk
@@ -132,47 +124,47 @@ Eller
 ## Basale funktioner
 ---
 ### Se importeret dataværdier i dataframe (tabel)
-	```
-	> dat
-	```
+
+	`` > dat ``
+	
 ### Se alle variable (kolonner) i dataframen (tabellen)
-	```
-	> ls() 
-	```
+	
+	`` > ls() ``
+	
 ### Lav ny dataframe (tabel) med specifikke variable (kolonner)
 	```
 	> myvars <- c("v1", "v2", "v3")
 	> newdata <- mydata[myvars]
 	```
-### Choose only certain columns with select(dataframename, columnName1, columnName2).
-	```
-	> select(mtcars, mpg, hp)
-	```
+### Choose only certain columns with select(dataframename, columnName1, columnName2)
+	
+	`` > select(mtcars, mpg, hp) ``
+	
 ## Nyttige funktioner og pakker
 ---
 ### Indlæs data fra database
-	```
-	RMySQL, RPostgresSQL, RSQLite  
-	```
+	
+	`` RMySQL, RPostgresSQL, RSQLite ``
+	
 ### Indlæs og skriv data til Excel
-	```
-	XLConnect, xlsx
-	```
+	
+	`` XLConnect, xlsx ``
+	
 ### Indlæs data fra SAS, SPSS mv. i R
-	```
-	foreign
-	```
+	
+	`` foreign ``
+	
 ### Indlæs data fra tekstfiler (indbygget i R)
-	```
-	read.csv, read.table, and read.fwf.
-	```
+	
+	`` read.csv, read.table, and read.fwf. ``
+	
 ## Visualiser data
 ---
 	ggplot2 - R's famous package for making beautiful graphics.
 
 	ggvis - Interactive, web based graphics built with the grammar of graphics.
 
-	rgl - Interactive 3D visualizations with R
+	rgl - Interactive 3D visualizations with R.
 
 	htmlwidgets - A fast way to build interactive (javascript based) visualizations with R. 
 	
@@ -254,8 +246,8 @@ Eller
 
 ## Yderligere ressourcer
 ---
-	<https://support.rstudio.com/hc/en-us/articles/200552336>
+#### 1.	<https://support.rstudio.com/hc/en-us/articles/200552336>
 	
-	<https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ>
+#### 2.	<https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ>
 
 

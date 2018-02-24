@@ -1,5 +1,4 @@
 # RStudio - Survival guide
-###### With love from K to J, and onwards from J
 ---
 ## Opsætning
 ---
@@ -160,92 +159,126 @@ Eller
 	
 ## Visualiser data
 ---
-	ggplot2 - R's famous package for making beautiful graphics.
-
-	ggvis - Interactive, web based graphics built with the grammar of graphics.
-
-	rgl - Interactive 3D visualizations with R.
-
-	htmlwidgets - A fast way to build interactive (javascript based) visualizations with R. 
+	### Indlæs dine data
 	
-		Packages that implement htmlwidgets include:
+###	Indlæs din dataframe (data i tabelformat)
+			
+		`` grafdata <- read.table("minedata.txt", header = TRUE) ``
+		`` grafdata <- read.csv("minedata.csv") ``
+		
+	### Basal datavisualisering
+		
+		1. Histogram
+		
+		#### Brug den indbyggede funktion hist()
+		
+		`` > hist(grafdata) ``
+		
+		2. Box Plot
+		
+		#### Brug den indbyggede funktion boxplot()
+			
+		`` > boxplot(grafdata) ``
+		
+	### Udviddet datavisualisering
+	
+	#### Brug datavisualiseringspakker, eksempelvis den populære ggvis()
+	
+		1. `` install.packages("ggvis") ``
+		
+		2. `` library(ggvis) ``
+		
+		3. 
+	
+	### Flere ppopulære pakker til datavisualisering
+	
+	- ggplot2 - R's famous package for making beautiful graphics.
 
-			leaflet (maps)
-			dygraphs (time series)
-			DT (tables)
-			diagrammeR (diagrams)
-			network3D (network graphs)
-			threeJS (3D scatterplots and globes)
- 			googleVis - Let's you use Google Chart tools to visualize data in R. 
+	- ggvis - Interactive, web based graphics built with the grammar of graphics.
+
+	- rgl - Interactive 3D visualizations with R.
+
+	- htmlwidgets - A fast way to build interactive (javascript based) visualizations with R. 
+	
+		- Packages that implement htmlwidgets include:
+
+			- leaflet (maps)
+			- dygraphs (time series)
+			- - DT (tables)
+			- diagrammeR (diagrams)
+			- network3D (network graphs)
+			- threeJS (3D scatterplots and globes)
+ 			- googleVis - Let's you use Google Chart tools to visualize data in R. 
 
 ## To model data
 ---
-	car - car's Anova function is popular for making type II and type III Anova tables.
+###	car - car's Anova function is popular for making type II and type III Anova tables.
 
-	mgcv - Generalized Additive Models
+###	mgcv - Generalized Additive Models
 
-	lme4/nlme - Linear and Non-linear mixed effects models
+###	lme4/nlme - Linear and Non-linear mixed effects models
 
-	randomForest - Random forest methods from machine learning
+###	randomForest - Random forest methods from machine learning
 
-	multcomp - Tools for multiple comparison testing
+###	multcomp - Tools for multiple comparison testing
 
-	vcd - Visualization tools and tests for categorical data
+###	vcd - Visualization tools and tests for categorical data
 
-	glmnet - Lasso and elastic-net regression methods with cross validation
+###	glmnet - Lasso and elastic-net regression methods with cross validation
 
-	survival - Tools for survival analysis
+###	survival - Tools for survival analysis
 
-	caret - Tools for training regression and classification models
+###	caret - Tools for training regression and classification models
 
 ## Report results
 ---
-	shiny - Easily make interactive, web apps with R.
+###	shiny - Easily make interactive, web apps with R.
 
-	R Markdown - Reporting. Export your report as an HTML, pdf, or MS Word document, or a HTML or pdf slideshow.
+###	R Markdown - Reporting. Export your report as an HTML, pdf, or MS Word document, or a HTML or pdf slideshow.
 
-	xtable - The xtable function takes an R object (like a data frame) and returns the latex or HTML code to embed.
+###	xtable - The xtable function takes an R object (like a data frame) and returns the latex or HTML code to embed.
 
 ## Spatial data
 ---
-	sp, maptools - Tools for loading and using spatial data including shapefiles.
+###	sp, maptools - Tools for loading and using spatial data including shapefiles.
 
-	maps - Easy to use map polygons for plots.
+###	maps - Easy to use map polygons for plots.
 
-	ggmap - Download street maps straight from Google maps and use them as a background in your ggplots.
+###	ggmap - Download street maps straight from Google maps and use them as a background in your ggplots.
 
 ## Time Series and Financial data
 ---
-	zoo - Provides the most popular format for saving time series objects in R.
+###	zoo - Provides the most popular format for saving time series objects in R.
 
-	xts - Very flexible tools for manipulating time series data sets.
+###	xts - Very flexible tools for manipulating time series data sets.
 
-	quantmod - Tools for downloading financial data, plotting common charts, and doing technical analysis.
+###	quantmod - Tools for downloading financial data, plotting common charts, and doing technical analysis.
 
 ## High performance R code
 ---	
-	Rcpp - Write R functions that call C++ code for lightning fast speed.
+###	Rcpp - Write R functions that call C++ code for lightning fast speed.
 
-	data.table - An alternative way to organize data sets for very, very fast operations. Useful for big data.
+###	data.table - An alternative way to organize data sets for very, very fast operations. Useful for big data.
 
-	parallel - Use parallel processing in R to speed up your code or to crunch large data sets.
+###	parallel - Use parallel processing in R to speed up your code or to crunch large data sets.
 
 ## Work with the web
 ---
-	XML - Read and create XML documents with R
+###	XML - Read and create XML documents with R
 
-	jsonlite - Read and create JSON data tables with R
+###	jsonlite - Read and create JSON data tables with R
 
-	httr - A set of useful tools for working with http connections
+###	httr - A set of useful tools for working with http connections
 
 ## Diverse
 ---
-	testthat - testthat provides an easy way to write unit tests for your code projects.
+###	testthat - testthat provides an easy way to write unit tests for your code projects.
 
-	roxygen2 - Document your R packages, turns inline code comments into pages.
+###	roxygen2 - Document your R packages, turns inline code comments into pages.
 
 ## Yderligere ressourcer
 ---
+
 #### <https://support.rstudio.com/hc/en-us/articles/200552336>
 	
 #### <https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ>

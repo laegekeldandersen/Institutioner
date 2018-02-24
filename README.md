@@ -1,6 +1,7 @@
-	## Indhold
-------
 # RStudio - Survival guide
+
+## Indhold
+------
 
 #### 1. Opsætning
 
@@ -166,27 +167,28 @@ Statistiske analyser
         • quote=F don’t quote anything, not even text
         • row.names=T write out row names (or F if there are no row names)
         • col.names=T write out column names
+	
+## Mest relevante pakker til biostatistik
+------
 
- Mest relevante biostatistics pakker
----
-        • dplyr - Subsetting, summarizing, rearranging, and joining together data sets.
-        • vcd - Visualization tools and tests for categorical data.
-        • foreign - Want to read a SAS data set into R? Or an SPSS data set?
-        • tidyr - Changes the layout of your data sets, converts into tidy format by gather and spread functions.
-        • multcomp - Tools for multiple comparison testing.
-        • survival - Tools for survival analysis.
-        • stringr - Easy to learn tools for regular expressions and character strings.
-        • lubridate - Tools that make working with dates and times easier.
-        
- Indbyggede datasæt i R
----
+- dplyr - Subsetting, summarizing, rearranging, and joining together data sets.
+- vcd - Visualization tools and tests for categorical data.
+- foreign - Want to read a SAS data set into R? Or an SPSS data set?
+- tidyr - Changes the layout of your data sets, converts into tidy format by gather and spread functions.
+- multcomp - Tools for multiple comparison testing.
+- survival - Tools for survival analysis.
+- stringr - Easy to learn tools for regular expressions and character strings.
+- lubridate - Tools that make working with dates and times easier.
+
+
+## Indbyggede datasæt i R
+------
         <http://www.sthda.com/english/wiki/r-built-in-data-sets/>
 
- 
 
-        
- Nyttige funktioner og pakker
----
+## Nyttige funktioner og pakker
+------
+
  Indlæs data fra database
         
 `` RMySQL, RPostgresSQL, RSQLite ``

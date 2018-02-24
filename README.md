@@ -1,40 +1,40 @@
 # RStudio - Survival guide
 ---
 ## Opsætning
+---
 ### Installér R
-#### R-statistics <https://www.r-project.org/>
-#### RStudio <https://www.rstudio.com/>
+---
+> #### R-statistics <https://www.r-project.org/>
+> #### RStudio <https://www.rstudio.com/>
+
 ### Working directory (WD)
-#### Aktuelle WD
+---
+> #### Aktuelle WD
 
 `` > getwd() ``
 
-#### Skift WD
+> #### Skift WD
+
 `` > setwd(“C://file/path”) ``
 
 Eller  
 
 `` > setwd("~/Test") ``
 
----
 ### Installer relevante pakker
-
-```
-> install.packages("<the package's name>")
-```
+---
+`` > install.packages("<the package's name>") ``
 
 ### Indlæs pakke
-
-```
-> library(<the package's name>)
-```
+---
+`` > library(<the package's name>) ``
 
 ### Importer eller åbn data
-
+---
 `` > read.csv(file=”myfile”) ``
 
 ### Gem tabelformateret data fra fil til tabel i R
-
+---
 `` > dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1) ``
 
 	• “dat” Kaldes en dataframe, hvis den er formateret som en tabel. 
@@ -48,18 +48,18 @@ Eller
 ## Diskriptiv statistik
 ---
 ### Funktioner
-
+---
 #### 1. Indbygget
-
+---
 `` > sapply(mydata) ``
 
-	Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
+> #### Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
 
 #### 2. Indbygget
 
 `` > summary(mydata) ``
 
-	Output: mean,median,25th and 75th quartiles,min,max
+> #### Output: mean,median,25th and 75th quartiles,min,max
 
 #### 3. Hmisc-pakken
 
@@ -68,31 +68,31 @@ Eller
 > library(Hmisc)
 > describe(mydata) 
 ```
-	Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
+> #### Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
 
 #### 4. Pastecs-pakken
-
+---
 ```
 > install.packages("pastecs")
 > library(pastecs)
 > stat.desc(mydata) 
 ```
-	Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
+> #### Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
 
 #### 5. Psych-pakken
-
+---
 ```
 > install.packages("psych")
 > library(psych)
 > describe(mydata)
 ```
-	Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
+> #### Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
 
 ## Statistiske analyser
 ---
 ### Case-control studies
-
-#### 1. <http://rpubs.com/kaz_yos/case-control1/>
+---
+> #### - <http://rpubs.com/kaz_yos/case-control1/>
 
 ## Eksporter eller gem data i fil
 ---
@@ -116,10 +116,9 @@ Eller
 	• stringr - Easy to learn tools for regular expressions and character strings.
 	• lubridate - Tools that make working with dates and times easier.
 	
-
 ## Indbyggede datasæt i R
 ---
-####	<http://www.sthda.com/english/wiki/r-built-in-data-sets/>
+> ####	<http://www.sthda.com/english/wiki/r-built-in-data-sets/>
 
 ## Basale funktioner
 ---
@@ -246,8 +245,8 @@ Eller
 
 ## Yderligere ressourcer
 ---
-#### 1.	<https://support.rstudio.com/hc/en-us/articles/200552336>
+> #### -	<https://support.rstudio.com/hc/en-us/articles/200552336>
 	
-#### 2.	<https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ>
+> #### -	<https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ>
 
 

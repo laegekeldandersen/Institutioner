@@ -53,13 +53,13 @@ Eller
 ---
 `` > sapply(mydata) ``
 
-#### Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
+##### Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
 
 #### 2. Indbygget
 
 `` > summary(mydata) ``
 
-#### Output: mean,median,25th and 75th quartiles,min,max
+##### Output: mean,median,25th and 75th quartiles,min,max
 
 #### 3. Hmisc-pakken
 
@@ -68,7 +68,7 @@ Eller
 > library(Hmisc)
 > describe(mydata) 
 ```
-#### Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
+##### Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
 
 #### 4. Pastecs-pakken
 ---
@@ -77,7 +77,7 @@ Eller
 > library(pastecs)
 > stat.desc(mydata) 
 ```
-#### Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
+##### Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
 
 #### 5. Psych-pakken
 ---
@@ -86,7 +86,7 @@ Eller
 > library(psych)
 > describe(mydata)
 ```
-#### Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
+##### Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
 
 ## Statistiske analyser
 ---

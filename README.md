@@ -6,9 +6,9 @@
 #### RStudio <https://www.rstudio.com/>
 ### Working directory (WD)
 #### Aktuelle WD
-```
-> getwd()
-```
+
+`` > getwd() ``
+
 #### Skift WD
 ```
 > setwd(“C://file/path”)
@@ -99,7 +99,7 @@
 ---
 ### Case-control studies
 
-	<http://rpubs.com/kaz_yos/case-control1>
+#### <http://rpubs.com/kaz_yos/case-control1>
 
 ## Eksporter eller gem data i fil
 ---

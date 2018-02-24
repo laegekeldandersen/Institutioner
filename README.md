@@ -10,13 +10,12 @@
 `` > getwd() ``
 
 #### Skift WD
-```
-> setwd(“C://file/path”)
-```
-** Eller ** 
-```
-> setwd("~/Test")
-```
+`` > setwd(“C://file/path”) ``
+
+Eller  
+
+`` > setwd("~/Test") ``
+
 ---
 ### Installer relevante pakker
 
@@ -99,7 +98,7 @@
 ---
 ### Case-control studies
 
-#### <http://rpubs.com/kaz_yos/case-control1>
+#### <http://rpubs.com/kaz_yos/case-control1/>
 
 ## Eksporter eller gem data i fil
 ---

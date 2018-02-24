@@ -4,8 +4,8 @@
 ---
 ### Installér R
 ---
-#### R-statistics <https://www.r-project.org/>
-#### RStudio <https://www.rstudio.com/>
+#### R-statistics: <https://www.r-project.org/>
+#### RStudio: <https://www.rstudio.com/>
 
 ### Working directory (WD)
 ---
@@ -92,7 +92,7 @@ Eller
 ---
 ### Case-control studies
 ---
-#### - <http://rpubs.com/kaz_yos/case-control1/>
+#### <http://rpubs.com/kaz_yos/case-control1/>
 
 ## Eksporter eller gem data i fil
 ---

@@ -4,16 +4,16 @@
 ---
 ### Installér R
 ---
-> #### R-statistics <https://www.r-project.org/>
-> #### RStudio <https://www.rstudio.com/>
+#### R-statistics <https://www.r-project.org/>
+#### RStudio <https://www.rstudio.com/>
 
 ### Working directory (WD)
 ---
-> #### Aktuelle WD
+#### Aktuelle WD
 
 `` > getwd() ``
 
-> #### Skift WD
+#### Skift WD
 
 `` > setwd(“C://file/path”) ``
 
@@ -53,13 +53,13 @@ Eller
 ---
 `` > sapply(mydata) ``
 
-> #### Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
+#### Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
 
 #### 2. Indbygget
 
 `` > summary(mydata) ``
 
-> #### Output: mean,median,25th and 75th quartiles,min,max
+#### Output: mean,median,25th and 75th quartiles,min,max
 
 #### 3. Hmisc-pakken
 
@@ -68,7 +68,7 @@ Eller
 > library(Hmisc)
 > describe(mydata) 
 ```
-> #### Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
+#### Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
 
 #### 4. Pastecs-pakken
 ---
@@ -77,7 +77,7 @@ Eller
 > library(pastecs)
 > stat.desc(mydata) 
 ```
-> #### Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
+#### Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
 
 #### 5. Psych-pakken
 ---
@@ -86,13 +86,13 @@ Eller
 > library(psych)
 > describe(mydata)
 ```
-> #### Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
+#### Output: item name ,item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
 
 ## Statistiske analyser
 ---
 ### Case-control studies
 ---
-> #### - <http://rpubs.com/kaz_yos/case-control1/>
+#### - <http://rpubs.com/kaz_yos/case-control1/>
 
 ## Eksporter eller gem data i fil
 ---
@@ -118,44 +118,44 @@ Eller
 	
 ## Indbyggede datasæt i R
 ---
-> ####	<http://www.sthda.com/english/wiki/r-built-in-data-sets/>
+####	<http://www.sthda.com/english/wiki/r-built-in-data-sets/>
 
 ## Basale funktioner
 ---
 ### Se importeret dataværdier i dataframe (tabel)
 
-	`` > dat ``
+`` > dat ``
 	
 ### Se alle variable (kolonner) i dataframen (tabellen)
 	
-	`` > ls() ``
+`` > ls() ``
 	
 ### Lav ny dataframe (tabel) med specifikke variable (kolonner)
-	```
-	> myvars <- c("v1", "v2", "v3")
-	> newdata <- mydata[myvars]
-	```
+```
+> myvars <- c("v1", "v2", "v3")
+> newdata <- mydata[myvars]
+```
 ### Choose only certain columns with select(dataframename, columnName1, columnName2)
 	
-	`` > select(mtcars, mpg, hp) ``
+`` > select(mtcars, mpg, hp) ``
 	
 ## Nyttige funktioner og pakker
 ---
 ### Indlæs data fra database
 	
-	`` RMySQL, RPostgresSQL, RSQLite ``
+`` RMySQL, RPostgresSQL, RSQLite ``
 	
 ### Indlæs og skriv data til Excel
 	
-	`` XLConnect, xlsx ``
+`` XLConnect, xlsx ``
 	
 ### Indlæs data fra SAS, SPSS mv. i R
 	
-	`` foreign ``
+`` foreign ``
 	
 ### Indlæs data fra tekstfiler (indbygget i R)
 	
-	`` read.csv, read.table, and read.fwf. ``
+`` read.csv, read.table, and read.fwf. ``
 	
 ## Visualiser data
 ---
@@ -245,8 +245,8 @@ Eller
 
 ## Yderligere ressourcer
 ---
-> #### -	<https://support.rstudio.com/hc/en-us/articles/200552336>
+#### <https://support.rstudio.com/hc/en-us/articles/200552336>
 	
-> #### -	<https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ>
+#### <https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ>
 
 

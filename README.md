@@ -77,6 +77,11 @@
 > read.csv(file=”myfile”)
 ```
 
+**Indbyggede datasæt i R**
+
+
+* http://www.sthda.com/english/wiki/r-built-in-data-sets/
+
 
 ## 3. Basale Funktioner
 ------
@@ -98,8 +103,9 @@
 
 ```
 > myvars <- c("v1", "v2", "v3")
+```
 
-
+```
 > newdata <- mydata[myvars]
 ```
 
@@ -113,7 +119,7 @@
 ## 4. Statistik
 ------
 
-### 4.1 Indbyggede funktioner
+### 4.1 Diskriptiv statistik
 
 ``` 
 > sapply(mydata)
@@ -163,9 +169,6 @@
 **Output: item name, item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se**
 
 
-## Statistiske analyser
-------
-
 
 ### 1. Case-control studies
 ------
@@ -187,12 +190,6 @@
 - survival - Tools for survival analysis.
 - stringr - Easy to learn tools for regular expressions and character strings.
 - lubridate - Tools that make working with dates and times easier.
-
-
-## Indbyggede datasæt i R
-------
-
-* <http://www.sthda.com/english/wiki/r-built-in-data-sets/>
 
 
 ## Nyttige funktioner og pakker

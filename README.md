@@ -217,7 +217,8 @@ XLConnect, xlsx
 
 **Udbygges snarest med konkrete eksempler!**
 
-* 
+* http://www.cyclismo.org/tutorial/R/hwI.html
+* https://cran.r-project.org/web/packages/epiR/epiR.pdf
 * http://rpubs.com/kaz_yos/case-control1/
 
 

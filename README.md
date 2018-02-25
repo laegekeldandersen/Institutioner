@@ -242,13 +242,13 @@ newdata <- mydata[!myvars]
 #### 1. Indlæs din dataframe (data i tabelformat)
                         
 ```
-grafdata <- read.table("minedata.txt", header = TRUE)
+> grafdata <- read.table("minedata.txt", header = TRUE)
 ```
 		
 Eller
 		
 ``` 
-grafdata <- read.csv("minedata.csv") 
+> grafdata <- read.csv("minedata.csv") 
 ```
                 
 #### 2. Basal datavisualisering
@@ -274,11 +274,11 @@ grafdata <- read.csv("minedata.csv")
 **Brug datavisualiseringspakker, eksempelvis den populære ggvis()**
         
 ```
-install.packages("ggvis") 
+> install.packages("ggvis") 
 ```
 		             
 ``` 
-library(ggvis) 
+> library(ggvis) 
 ```            
         
 **Flere populære pakker til datavisualisering**
@@ -320,21 +320,17 @@ library(ggvis)
 ```
 > write.table(dat, ”dat.txt”, sep=”\t”, quote=F, row.names=T, col.names=T)
 ```
+
 * dat name of the table in R
-
 * ”dat.txt” name of the file on disk
-
 * sep=”\t” use tabs to separate columns
-
 * quote=F don’t quote anything, not even text
-
 * row.names=T write out row names (or F if there are no row names)
-
 * col.names=T write out column names
 
 
 
- 6. Model data
+**Model data**
 ------
         
 - car - car's Anova function is popular for making type II and type III Anova tables.
@@ -356,7 +352,7 @@ library(ggvis)
 - caret - Tools for training regression and classification models
 
 
- Report results
+**Report results**
 ------
         
 - shiny - Easily make interactive, web apps with R.
@@ -366,7 +362,7 @@ library(ggvis)
 - xtable - The xtable function takes an R object (like a data frame) and returns the latex or HTML code to embed.
 
  
-## 8. Spatial data
+**Spatial data**
 ------
 
 - sp, maptools - Tools for loading and using spatial data including shapefiles.
@@ -376,7 +372,7 @@ library(ggvis)
 - ggmap - Download street maps straight from Google maps and use them as a background in your ggplots.
 
 
-Time Series and Financial data
+**Time Series and Financial data**
 ------
 
 - zoo - Provides the most popular format for saving time series objects in R.
@@ -386,7 +382,7 @@ Time Series and Financial data
 - quantmod - Tools for downloading financial data, plotting common charts, and doing technical analysis.
 
 
-10. Work with the web
+**Work with the web**
 ------
 
 - XML - Read and create XML documents with R

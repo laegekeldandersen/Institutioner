@@ -76,9 +76,38 @@
 ```
 > read.csv(file=”myfile”)
 ```
+```
+> read.csv2(file=”myfile”, header=TRUE)
+```
+```
+> read.delim(file=”myfile”, header=TRUE)
+```
+```
+> readLines("myfile”)
+```
+```
+> read.fwf(”myfile”, widths=c(1,2,3)
+```
+
+**Indlæs data fra SAS, SPSS mv. i R**
+  
+**SPSS**
+```
+> library("foreign")
+> read.spss(“myfile”) 
+```
+**Stata**
+```
+> library("foreign")
+> read.dta(“myfile”) 
+```
+**SAS**
+```
+> library("foreign")
+> read.export(“myfile”) 
+```
 
 **Indbyggede datasæt i R**
-
 
 * http://www.sthda.com/english/wiki/r-built-in-data-sets/
 
@@ -100,12 +129,8 @@
     
 **Lav ny dataframe (tabel) med specifikke variable (kolonner)**
 
-
 ```
 > myvars <- c("v1", "v2", "v3")
-```
-
-```
 > newdata <- mydata[myvars]
 ```
 
@@ -115,6 +140,12 @@
 > select(mtcars, mpg, hp)
 ```
 
+**Ekskludér individuelle variable (kolonner)**
+
+´´´
+myvars <- names(mydata) %in% c("v1", "v2", "v3") 
+newdata <- mydata[!myvars]
+´´´
 
 ## 4. Statistik
 ------
@@ -206,19 +237,7 @@ RMySQL, RPostgresSQL, RSQLite
 ```
 XLConnect, xlsx 
 ```
-        
-#### Indlæs data fra SAS, SPSS mv. i R
-        
-```
-foreign 
-```
-        
-#### Indlæs data fra tekstfiler (indbygget i R)
-        
-```
-read.csv, read.table, and read.fwf. 
-```
-        
+                
 ## 5. Datavisualisering
 ------
  
@@ -297,11 +316,8 @@ library(ggvis)
 **Derfor indeholder en dataframe kolonner og rækker med data.**
 
 * If every column contains a title, then argument should be header=TRUE (or header=T), otherwise header=F.
-
 * If the file is tab-delimited, then sep=”\t”. Other options are, e.g., sep=”,” and sep=” ”.
-
 * If every case (row) has it’s own non-repeating title, and the first column of the file contains these row name
-
 * then row.names=1, otherwise the argument should be deleted.
 
 ```

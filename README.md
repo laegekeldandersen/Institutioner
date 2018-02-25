@@ -73,6 +73,8 @@
 ## 2. Indlæs data
 ------
 
+* Detaljer ses hér: http://www.dummies.com/programming/r/r-for-dummies-cheat-sheet/
+
 ```
 > read.csv(file=”myfile”)
 ```
@@ -105,6 +107,15 @@
 ```
 > library("foreign")
 > read.export(“myfile”) 
+```
+
+**Indlæs data fra database**        
+``` 
+RMySQL, RPostgresSQL, RSQLite 
+```  
+**Indlæs og skriv data til Excel**
+```
+XLConnect, xlsx 
 ```
 
 **Indbyggede datasæt i R**
@@ -222,25 +233,11 @@ newdata <- mydata[!myvars]
 - stringr - Easy to learn tools for regular expressions and character strings.
 - lubridate - Tools that make working with dates and times easier.
 
-
-## Nyttige funktioner og pakker
-------
-
-#### Indlæs data fra database
-        
-``` 
-RMySQL, RPostgresSQL, RSQLite 
-```
-        
-**Indlæs og skriv data til Excel**
-        
-```
-XLConnect, xlsx 
-```
                 
 ## 5. Datavisualisering
 ------
- 
+
+* Detaljer ses hér: https://www.statmethods.net/graphs/creating.html
         
 #### 1. Indlæs din dataframe (data i tabelformat)
                         
@@ -402,9 +399,6 @@ Time Series and Financial data
 ## 7. Begreber
 ------
 
-* testthat - testthat provides an easy way to write unit tests for your code projects.
-
-* roxygen2 - Document your R packages, turns inline code comments into pages.
 
 
 ## 8. Ressourcer
@@ -418,6 +412,7 @@ Time Series and Financial data
 * https://support.rstudio.com/hc/en-us/articles/200552336
         
 * https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ
+
 
 ## 9. Todo
 ------

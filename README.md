@@ -1,64 +1,60 @@
 # RStudio - Survival guide
+------
 
 ## Indhold
 ------
 
 ### 1. Opsætning
 
-### 2. Installér R
+### 2. Indlæs data
 
-### 3. Arbejdsbibliotek
+### 3. Basale funktioner
 
-### 4. Pakker
+### 4. Statistik
 
-### 5. Indlæs data
+### 5. Datavisualisering
 
-### 6. Basale funktioner
+### 6. Gem eller eksport data
 
-### 7. Statististiske funktioner
+### 7. Begreber
 
-### 8. Datavisualisering
+### 8. Ressourcer
 
-### 9. Gem eller eksport data
+### 9. Todo
 
-### 10. Ressourcer
-
-
-
-## Opsætning
+------
+## 1. Opsætning
 ------
 
-### 1. Installér R
+### 1.1 Installér R
 
 * R-statistics: <https://www.r-project.org/>
 
-
 * RStudio: <https://www.rstudio.com/>
 
+### 1.2 Arbejdsbibliotek
 
-### 2. Arbejdsbibliotek
-
-1. Aktuelle
+* Aktuelle
 
 ```
 > getwd() 
 ```
 	
 
-2. Skift
+* Skift
 
 ```
 > setwd(“C://file/path”) 
 ```
 
-Eller  
+* Eller  
 
 ```
 > setwd("~/Test") 
 ```
 
 
-## Installer pakker
+### 1.3 Installer pakker
 ------
 
 ``` 
@@ -66,7 +62,7 @@ Eller
 ```
 
 
-## Indlæs pakke
+### 1.4 Indlæs pakke
 ------
 
 ```
@@ -74,7 +70,7 @@ Eller
 ```
 
 
-## Indlæs data
+## 2. Indlæs data
 ------
 
 ```
@@ -82,22 +78,22 @@ Eller
 ```
 
 
-## Basale Funktioner
+## 3. Basale Funktioner
 ------
 
-### 1. Se importeret dataværdier i dataframe (tabel)
+**Se importeret dataværdier i dataframe (tabel)**
 
 ``` 
 > dat
 ```
     
-### 2. Se alle variable (kolonner) i dataframen (tabellen)
+**Se alle variable (kolonner) i dataframen (tabellen)**
     
 ``` 
 > ls() 
 ```
     
-### 3. Lav ny dataframe (tabel) med specifikke variable (kolonner)
+**Lav ny dataframe (tabel) med specifikke variable (kolonner)**
 
 
 ```
@@ -107,33 +103,33 @@ Eller
 > newdata <- mydata[myvars]
 ```
 
-### 4. Vælg individuelle variable (kolonner)
+**Vælg individuelle variable (kolonner)**
     
 ```
 > select(mtcars, mpg, hp)
 ```
 
 
-## Diskriptiv statistik
+## 4. Statistik
 ------
 
-### 1. Indbygget
+### 4.1 Indbyggede funktioner
 
 ``` 
 > sapply(mydata)
 ```
 
-##### Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier
+**Output: mean, sd, var, min, max, median, range, and quantile. Ekskluderer manglende værdier**
 
 
 ``` 
 > summary(mydata)
 ```
 
-##### Output: mean, median, 25th and 75th quartiles, min, max
+**Output: mean, median, 25th and 75th quartiles, min, max**
 
 
-### 2. Hmisc-pakken
+### 4.2 Hmisc-pakken
 
 ```
 > install.packages("hmisc")
@@ -141,10 +137,10 @@ Eller
 > describe(mydata) 
 ```
 
-##### Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.
+**Output: n, nmiss, unique, mean, 5,10,25,50,75,90,95th percentiles, the 5 lowest and 5 highest scores.**
 
 
-## 3. Pastecs-pakken
+### 4.3 Pastecs-pakken
 
 ```
 > install.packages("pastecs")
@@ -152,10 +148,10 @@ Eller
 > stat.desc(mydata) 
 ```
 
-##### Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var
+**Output: nbr.val, nbr.null, nbr.na, min max, range, sum, median, mean, SE.mean, CI.mean, var, std.dev, coef.var**
 
 
-5. Psych-pakken
+### 4.4 Psych-pakken
 
 
 ```
@@ -164,18 +160,19 @@ Eller
 > describe(mydata)
 ```
 
-##### Output: item name, item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se
+**Output: item name, item number, nvalid, mean, sd, median, mad, min, max, skew, kurtosis, se**
 
 
-## Gem tabelformateret data fra fil til tabel i R
+## 6. Gem data til fil
 ------
 
 ```
 > dat <-read.table(”filename”, header=T, sep=”\t”, row.names=1)
 ```
-* “dat” Kaldes en dataframe, hvis den er formateret som en tabel. 
 
-* Derfor indeholder en dataframe kolonner og rækker med data.
+**“dat” Kaldes en dataframe, hvis den er formateret som en tabel.**
+
+**Derfor indeholder en dataframe kolonner og rækker med data.**
 
 * If every column contains a title, then argument should be header=TRUE (or header=T), otherwise header=F.
 
@@ -184,10 +181,6 @@ Eller
 * If every case (row) has it’s own non-repeating title, and the first column of the file contains these row name
 
 * then row.names=1, otherwise the argument should be deleted.
-
-
-## Eksporter eller gem data i fil
-------
 
 ```
 > write.table(dat, ”dat.txt”, sep=”\t”, quote=F, row.names=T, col.names=T)
@@ -212,10 +205,13 @@ Eller
 ### 1. Case-control studies
 ------
 
-* <http://rpubs.com/kaz_yos/case-control1/>
+**Udbygges snarest med konkrete eksempler!**
+
+* 
+* http://rpubs.com/kaz_yos/case-control1/
 
 
-## Mest relevante pakker til biostatistik
+**Mest relevante pakker til biostatistik**
 ------
 
 - dplyr - Subsetting, summarizing, rearranging, and joining together data sets.
@@ -243,7 +239,7 @@ Eller
 RMySQL, RPostgresSQL, RSQLite 
 ```
         
-#### Indlæs og skriv data til Excel
+**Indlæs og skriv data til Excel**
         
 ```
 XLConnect, xlsx 
@@ -261,7 +257,7 @@ foreign
 read.csv, read.table, and read.fwf. 
 ```
         
-## Visualiser data
+## 5. Datavisualisering
 ------
  
         
@@ -281,7 +277,7 @@ grafdata <- read.csv("minedata.csv")
                 
 ##### Histogram
                 
-Brug den indbyggede funktion hist()
+**Brug den indbyggede funktion hist()**
                 
 ```
 > hist(grafdata) 
@@ -289,7 +285,7 @@ Brug den indbyggede funktion hist()
                 
 ##### Box Plot
                 
-Brug den indbyggede funktion boxplot()
+**Brug den indbyggede funktion boxplot()**
                         
 ```
 > boxplot(grafdata) 
@@ -297,7 +293,7 @@ Brug den indbyggede funktion boxplot()
      
 #### 3. Udviddet datavisualisering
         
-##### Brug datavisualiseringspakker, eksempelvis den populære ggvis()
+**Brug datavisualiseringspakker, eksempelvis den populære ggvis()**
         
 ```
 install.packages("ggvis") 
@@ -307,7 +303,7 @@ install.packages("ggvis")
 library(ggvis) 
 ```            
         
-##### Flere populære pakker til datavisualisering
+**Flere populære pakker til datavisualisering**
         
 - ggplot2 - R's famous package for making beautiful graphics.
 
@@ -328,7 +324,7 @@ library(ggvis)
 	- googleVis - Let's you use Google Chart tools to visualize data in R. 
 
 
-## 6. Model data
+ 6. Model data
 ------
         
 - car - car's Anova function is popular for making type II and type III Anova tables.
@@ -350,7 +346,7 @@ library(ggvis)
 - caret - Tools for training regression and classification models
 
 
-## 7. Report results
+ Report results
 ------
         
 - shiny - Easily make interactive, web apps with R.
@@ -370,7 +366,7 @@ library(ggvis)
 - ggmap - Download street maps straight from Google maps and use them as a background in your ggplots.
 
 
-## 9. Time Series and Financial data
+Time Series and Financial data
 ------
 
 - zoo - Provides the most popular format for saving time series objects in R.
@@ -380,7 +376,7 @@ library(ggvis)
 - quantmod - Tools for downloading financial data, plotting common charts, and doing technical analysis.
 
 
-## 10. Work with the web
+10. Work with the web
 ------
 
 - XML - Read and create XML documents with R
@@ -390,15 +386,15 @@ library(ggvis)
 - httr - A set of useful tools for working with http connections
 
 
-## 11. Diverse
+## 7. Begreber
 ------
 
-- testthat - testthat provides an easy way to write unit tests for your code projects.
+* testthat - testthat provides an easy way to write unit tests for your code projects.
 
-- roxygen2 - Document your R packages, turns inline code comments into pages.
+* roxygen2 - Document your R packages, turns inline code comments into pages.
 
 
-## 12. Yderligere ressourcer
+## 8. Ressourcer
 ------
 * https://www.statmethods.net/
 
@@ -406,6 +402,9 @@ library(ggvis)
 
 * https://rseek.org/
 
-* <https://support.rstudio.com/hc/en-us/articles/200552336>
+* https://support.rstudio.com/hc/en-us/articles/200552336
         
-* <https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ>
+* https://www.youtube.com/watch?v=T5uMTKHoiHE&index=1&list=PLIUXJDHaV5ppQ53AVcUMpC3c9w51g6OQ
+
+## 9. Todo
+------

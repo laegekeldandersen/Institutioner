@@ -16,7 +16,7 @@
 
 ### 6. Gem eller eksport data
 
-### 7. Begreber
+### 7. Andre nyttige funktioner
 
 ### 8. Ressourcer
 
@@ -330,72 +330,47 @@ Eller
 * col.names=T write out column names
 
 
+## 7. Andre nyttige funktioner
+------
 
 **Model data**
-------
         
 - car - car's Anova function is popular for making type II and type III Anova tables.
- 
 - mgcv - Generalized Additive Models
- 
 - lme4/nlme - Linear and Non-linear mixed effects models
- 
 - randomForest - Random forest methods from machine learning
- 
 - multcomp - Tools for multiple comparison testing
- 
 - vcd - Visualization tools and tests for categorical data
- 
 - glmnet - Lasso and elastic-net regression methods with cross validation
- 
 - survival - Tools for survival analysis
-
 - caret - Tools for training regression and classification models
 
 
 **Report results**
-------
         
 - shiny - Easily make interactive, web apps with R.
-
 - R Markdown - Reporting. Export your report as an HTML, pdf, or MS Word document, or a HTML or pdf slideshow.
-
 - xtable - The xtable function takes an R object (like a data frame) and returns the latex or HTML code to embed.
-
  
 **Spatial data**
-------
 
 - sp, maptools - Tools for loading and using spatial data including shapefiles.
-
 - maps - Easy to use map polygons for plots.
-
 - ggmap - Download street maps straight from Google maps and use them as a background in your ggplots.
 
 
 **Time Series and Financial data**
-------
 
 - zoo - Provides the most popular format for saving time series objects in R.
-
 - xts - Very flexible tools for manipulating time series data sets.
-
 - quantmod - Tools for downloading financial data, plotting common charts, and doing technical analysis.
 
 
 **Work with the web**
-------
 
 - XML - Read and create XML documents with R
-
 - jsonlite - Read and create JSON data tables with R
-
 - httr - A set of useful tools for working with http connections
-
-
-## 7. Begreber
-------
-
 
 
 ## 8. Ressourcer

@@ -153,13 +153,11 @@ XLConnect, xlsx
 
 **Ekskludér individuelle variable (kolonner)**
 
-´´´
-myvars <- names(mydata) %in% c("v1", "v2", "v3") 
-newdata <- mydata[!myvars]
-´´´
-
 ## 4. Statistik
 ------
+
+* [Datacamp - Basic R](https://campus.datacamp.com/courses/free-introduction-to-r/chapter-1-intro-to-basics-1?ex=3)
+* [Datacamp - Data tables](https://www.datacamp.com/community/tutorials/data-table-r-tutorial)
 
 ### 4.1 Diskriptiv statistik
 
@@ -217,10 +215,12 @@ newdata <- mydata[!myvars]
 
 **Udbygges snarest med konkrete eksempler!**
 
-* http://www.cyclismo.org/tutorial/R/hwI.html
-* https://cran.r-project.org/web/packages/epiR/epiR.pdf
-* http://rpubs.com/kaz_yos/case-control1/
-
+* [Cyclismo](http://www.cyclismo.org/tutorial/R/hwI.html)
+* [CRAN - Epi R pakken](https://cran.r-project.org/web/packages/epiR/epiR.pdf)
+* [RPubs - Case Control](http://rpubs.com/kaz_yos/case-control1/)
+* [Statsref - Case Control](http://www.statsref.com/HTML/index.html?case-control_studies2.html)
+* [Statmethods - Correlations](https://www.statmethods.net/stats/correlations.html)
+* [A little book on of r... - Case Control](http://a-little-book-of-r-for-biomedical-statistics.readthedocs.io/en/latest/src/biomedicalstats.html#testing-for-an-association-between-disease-and-exposure-in-a-cohort-or-case-control-study)
 
 **Mest relevante pakker til biostatistik**
 ------
@@ -255,6 +255,9 @@ Eller
 #### 2. Basal datavisualisering
                 
 ##### Histogram
+
+* [Datacamp - Histogram](https://www.datacamp.com/community/tutorials/make-histogram-basic-r/?)
+* [Datacamp - Graph for summary statistics](http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R2_SummaryStats-Graphs/R2_SummaryStats-Graphs_print.html)
                 
 **Brug den indbyggede funktion hist()**
                 

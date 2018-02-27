@@ -154,8 +154,8 @@ XLConnect, xlsx
 **Ekskludér individuelle variable (kolonner)**
 
 ´´´
-> myvars <- names(mydata) %in% c("v1", "v2", "v3") 
-> newdata <- mydata[!myvars]
+myvars <- names(mydata) %in% c("v1", "v2", "v3") 
+newdata <- mydata[!myvars]
 ´´´
 
 ## 4. Statistik

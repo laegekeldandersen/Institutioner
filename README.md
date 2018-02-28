@@ -28,9 +28,9 @@
 
 ### 1.1 Installér R
 
-* R-statistics: <https://www.r-project.org/>
+* [R-statistics](https://www.r-project.org/)
 
-* RStudio: <https://www.rstudio.com/>
+* [RStudio](https://www.rstudio.com/)
 
 ### 1.2 Arbejdsbibliotek
 
@@ -73,7 +73,7 @@
 ## 2. Indlæs data
 ------
 
-* Detaljer ses hér: http://www.dummies.com/programming/r/r-for-dummies-cheat-sheet/
+* Detaljer ses [hér](http://www.dummies.com/programming/r/r-for-dummies-cheat-sheet/)
 
 ```
 > read.csv(file=”myfile”)
@@ -118,9 +118,7 @@ RMySQL, RPostgresSQL, RSQLite
 XLConnect, xlsx 
 ```
 
-**Indbyggede datasæt i R**
-
-* http://www.sthda.com/english/wiki/r-built-in-data-sets/
+* [Indbyggede datasæt i R](http://www.sthda.com/english/wiki/r-built-in-data-sets/)
 
 
 ## 3. Basale Funktioner

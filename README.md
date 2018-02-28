@@ -151,8 +151,6 @@ XLConnect, xlsx
 > select(mtcars, mpg, hp)
 ```
 
-**Ekskludér individuelle variable (kolonner)**
-
 ## 4. Statistik
 ------
 
@@ -253,7 +251,7 @@ Interquartile range | IQR()
 ## 5. Datavisualisering
 ------
 
-* Detaljer ses hér: https://www.statmethods.net/graphs/creating.html
+* Detaljer ses [hér](https://www.statmethods.net/graphs/creating.html)
         
 #### 1. Indlæs din dataframe (data i tabelformat)
                         

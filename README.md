@@ -162,14 +162,14 @@ XLConnect, xlsx
 Beskrivelse | R-funktion
 ------------ | -------------
 Gennemsnit | `mean()`
-Standard deviation | sd()
-Varians | var()
-Minimum	| min()
-Maximum	| maximum()
-Median	| median()
-Range | range()
-Quantiler | quantile()
-Interquartile range | IQR()
+Standard deviation | `sd()`
+Varians | `var()`
+Minimum	| `min()`
+Maximum	| `maximum()`
+Median	| `median()`
+Range | `range()`
+Quantiler | `quantile()`
+Interquartile range | `IQR()`
 
 
 ``` 

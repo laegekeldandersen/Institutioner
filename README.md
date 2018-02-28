@@ -161,7 +161,7 @@ XLConnect, xlsx
 
 Beskrivelse | R-funktion
 ------------ | -------------
-Gennemsnit | mean()
+Gennemsnit | `mean()`
 Standard deviation | sd()
 Varians | var()
 Minimum	| min()

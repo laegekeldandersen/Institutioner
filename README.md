@@ -172,6 +172,8 @@ Quantiler | `quantile()`
 Interquartile range | `IQR()`
 
 
+**Diskriptive funktioner med flere parametre**
+
 ``` 
 > sapply(mydata)
 ```
